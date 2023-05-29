@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1548852421938897148}
   - component: {fileID: 8964858863658348957}
   - component: {fileID: 4869106769150294896}
+  - component: {fileID: 6845023011467276314}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -134,7 +135,7 @@ Animator:
   m_GameObject: {fileID: 3605007385035545818}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 142f2ae04014d844394fd06542b47853, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -145,3 +146,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6845023011467276314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605007385035545818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d98413e9b4f0c448568128f886859a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3

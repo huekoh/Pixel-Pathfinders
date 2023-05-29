@@ -182,7 +182,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -330,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swordCollider: {fileID: 8630624781283772675}
   swordDamage: 1
+  knockbackForce: 500
   faceDown: {x: -0.16, y: -1.04, z: 0}
   faceUp: {x: -0.14, y: 0.57, z: 0}
   faceLeft: {x: -1.4, y: -0.34, z: 0}
