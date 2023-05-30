@@ -25,8 +25,8 @@ public class SwordHitbox : MonoBehaviour
         IDamageable damagableObject = collider.GetComponent<IDamageable>();
 
         if (damagableObject != null) {
-            Vector3 parentPos = gameObject.GetComponentInParent<Transform>().position;
-            Vector2 direction = (collider.transform.position - parentPos).normalized;
+            Vector2 direction = (collider.transform.position - transform.parent.position);
+            Debug.Log("collider pos: " + collider.transform.position + " parentPos: " + transform.parent.position);
             Vector2 knockback = direction * knockbackForce;
 
             damagableObject.OnHit(swordDamage, knockback);
