@@ -13,11 +13,22 @@ public class PlayerControl : MonoBehaviour
     private Vector2 movement;
     bool canMove = true;
 
+    private static bool playerExists;
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         swordCollider = swordHitbox.GetComponent<Collider2D>();
+
+        //to prevent duplicates of player when swapping scenes
+        if(!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

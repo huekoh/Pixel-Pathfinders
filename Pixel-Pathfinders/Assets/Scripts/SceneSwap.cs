@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class SceneSwap : MonoBehaviour {
-    private void OnTriggerEnter2D(Collider2D colliderObject)
+
+    public string levelToLoad;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene("New_Main");
-        DontDestroyOnLoad(colliderObject);
+        if(other.gameObject.name == "Player")
+        {
+            SceneManager.LoadScene(levelToLoad);
+        }
     }
 }
