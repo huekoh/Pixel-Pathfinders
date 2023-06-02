@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1953364394, guid: 57677e483dc1aa544be50cdc9b09adb3, type: 3}
+  m_Sprite: {fileID: -1242944481, guid: 153c703c2969eb2409b7b2ca81f0b21b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -203,7 +203,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.41749978}
+  m_Offset: {x: 0, y: -0.09}
   serializedVersion: 2
   m_Radius: 0.24556875
 --- !u!114 &7482573063214606213
@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5018674239390614783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4, y: -0.36, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -303,7 +303,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -314,7 +314,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.46424544, y: 0.45}
+  m_Size: {x: 0.85, y: 0.85}
   m_EdgeRadius: 0
 --- !u!114 &3847586748565780559
 MonoBehaviour:
@@ -331,7 +331,7 @@ MonoBehaviour:
   swordCollider: {fileID: 8630624781283772675}
   swordDamage: 1
   knockbackForce: 500
-  faceDown: {x: -0.16, y: -1.04, z: 0}
-  faceUp: {x: -0.14, y: 0.57, z: 0}
-  faceLeft: {x: -1.4, y: -0.34, z: 0}
-  faceRight: {x: 1, y: -0.34, z: 0}
+  faceDown: {x: 0, y: -0.38, z: 0}
+  faceUp: {x: 0, y: 0.38, z: 0}
+  faceLeft: {x: -0.38, y: 0, z: 0}
+  faceRight: {x: 0.38, y: 0, z: 0}

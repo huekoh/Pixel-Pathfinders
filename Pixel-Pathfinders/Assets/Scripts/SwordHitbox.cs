@@ -7,31 +7,16 @@ public class SwordHitbox : MonoBehaviour
     public Collider2D swordCollider;
     public float swordDamage = 1f;
     public float knockbackForce = 5f;
-    public Vector3 faceDown = new Vector3(-0.16f, -1.04f, 0);
-    public Vector3 faceUp = new Vector3(-0.14f, 0.57f, 0);
-    public Vector3 faceLeft = new Vector3(-1.04f, -0.34f, 0);
-    public Vector3 faceRight = new Vector3(0.72f, -0.34f, 0);
+    public Vector3 faceDown = new Vector3(0, -0.38f, 0);
+    public Vector3 faceUp = new Vector3(0, 0.38f, 0);
+    public Vector3 faceLeft = new Vector3(-0.38f, 0, 0);
+    public Vector3 faceRight = new Vector3(0.38f, 0, 0);
 
     // Start is called before the first frame update
     void Start()
     {
         if (swordCollider == null) {
             Debug.Log("Sword Collider not set!");
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collider) {
-
-        IDamageable damagableObject = collider.GetComponent<IDamageable>();
-
-        if (damagableObject != null) {
-            Vector2 direction = (collider.transform.position - transform.parent.position);
-            Debug.Log("collider pos: " + collider.transform.position + " parentPos: " + transform.parent.position);
-            Vector2 knockback = direction * knockbackForce;
-
-            damagableObject.OnHit(swordDamage, knockback);
-        } else {
-            Debug.LogWarning("Collider does not implement IDamageable");
         }
     }
 
@@ -44,6 +29,22 @@ public class SwordHitbox : MonoBehaviour
             gameObject.transform.localPosition = faceRight;
         } else if (direction.x == -1) {
             gameObject.transform.localPosition = faceLeft;
+        }
+        Debug.Log("Collision pos: " + gameObject.transform.localPosition);
+    }
+
+    void OnTriggerEnter2D(Collider2D collider) {
+
+        IDamageable damagableObject = collider.GetComponent<IDamageable>();
+
+        if (damagableObject != null) {
+            Vector2 direction = (collider.transform.position - transform.parent.position);
+           // Debug.Log("collider pos: " + collider.transform.position + " parentPos: " + transform.parent.position);
+            Vector2 knockback = direction * knockbackForce;
+
+            damagableObject.OnHit(swordDamage, knockback);
+        } else {
+            Debug.LogWarning("Collider does not implement IDamageable");
         }
     }
 }
