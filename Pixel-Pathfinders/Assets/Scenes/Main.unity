@@ -32404,5 +32404,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 6845023011467276314, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
