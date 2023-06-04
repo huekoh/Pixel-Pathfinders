@@ -26,14 +26,15 @@ public class Slime : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col) {
-        //Debug.Log("HIT");
-        IDamageable damageable = col.collider.GetComponent<IDamageable>();
-        if (damageable != null) {
-            Vector2 direction = (col.collider.transform.position - transform.position);
-           // Debug.Log("collider pos: " + collider.transform.position + " parentPos: " + transform.parent.position);
-            Vector2 knockback = direction * knockbackForce;
+        if (col.gameObject.tag == "Player") {
+            IDamageable damageable = col.collider.GetComponent<IDamageable>();
+            if (damageable != null) {
+                Vector2 direction = (col.collider.transform.position - transform.position);
+            // Debug.Log("collider pos: " + collider.transform.position + " parentPos: " + transform.parent.position);
+                Vector2 knockback = direction * knockbackForce;
 
-            damageable.OnHit(damage, knockback);
+                damageable.OnHit(damage, knockback);
+            }
         }
     }
 }
