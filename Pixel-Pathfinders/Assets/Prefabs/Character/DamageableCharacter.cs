@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slime : MonoBehaviour, IDamageable
+public class DamageableCharacter : MonoBehaviour, IDamageable
 {
     Animator animator;
     Rigidbody2D rb;

@@ -30,21 +30,19 @@ public class SwordHitbox : MonoBehaviour
         } else if (direction.x == -1) {
             gameObject.transform.localPosition = faceLeft;
         }
-        Debug.Log("Collision pos: " + gameObject.transform.localPosition);
+        //Debug.Log("Collision pos: " + gameObject.transform.localPosition);
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
 
-        IDamageable damagableObject = collider.GetComponent<IDamageable>();
+        IDamageable damageableObject = collider.GetComponent<IDamageable>();
 
-        if (damagableObject != null) {
+        if (damageableObject != null) {
             Vector2 direction = (collider.transform.position - transform.parent.position);
            // Debug.Log("collider pos: " + collider.transform.position + " parentPos: " + transform.parent.position);
             Vector2 knockback = direction * knockbackForce;
 
-            damagableObject.OnHit(swordDamage, knockback);
-        } else {
-            Debug.LogWarning("Collider does not implement IDamageable");
+            damageableObject.OnHit(swordDamage, knockback);
         }
     }
 }
