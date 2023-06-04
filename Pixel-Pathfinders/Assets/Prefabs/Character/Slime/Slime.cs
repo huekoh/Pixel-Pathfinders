@@ -7,21 +7,31 @@ public class Slime : MonoBehaviour
     public float damage = 1;
     public float knockbackForce = 5f;
     public float moveSpeed= 5f;
+    Animator animator;
     public DetectionZone detectionZone;
     Rigidbody2D rb;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate() {
         if (detectionZone.detectedObjects.Count > 0) {
             // Calculate direction to player
             Vector2 direction = (detectionZone.detectedObjects[0].transform.position - transform.position).normalized;
-
             // Move towards player
             rb.AddForce(direction * moveSpeed * Time.deltaTime);
-            //Debug.Log("FORCE:" + direction * moveSpeed * Time.deltaTime);
+
+            animator.SetFloat("Speed", moveSpeed);
+
+            if (direction.x > 0) {
+                animator.SetFloat("Direction.x", 1);
+            } else if (direction.x < 0) {
+                animator.SetFloat("Direction.x", -1);
+            }
+        } else {
+            animator.SetFloat("Speed", 0f);
         }
     }
 
