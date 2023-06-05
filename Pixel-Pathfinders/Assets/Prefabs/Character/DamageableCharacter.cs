@@ -9,7 +9,8 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
     Color originalColor;
-    bool isAlive = true;
+    //bool isAlive = true;
+    bool isInvulnerable = false;
     public GameObject healthTextPrefab;
     public float health = 5;
 
@@ -22,22 +23,27 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public void OnHit(float damage, Vector2 knockback)
     {
-        health -= damage;
-        rb.AddForce(knockback);
+        if (!isInvulnerable) {
+            health -= damage;
+            rb.AddForce(knockback);
 
-        // Change color of character to red everytime it's hit
-        spriteRenderer.color = Color.red;
-        StartCoroutine(RestoreColorCoroutine());
+            // Change color of character to red everytime it's hit
+            spriteRenderer.color = Color.red;
+            StartCoroutine(RestoreColorCoroutine());
 
-        // If health <= 0, destroy character after 0.3 seconds
-        if (health <= 0) {
-            Invoke("DestroySelf", 0.3f);
-        }
+            // If health <= 0, destroy character after 0.3 seconds
+            if (health <= 0) {
+                Invoke("DestroySelf", 0.3f);
+            }
 
-        // Show floating text
-        if (healthTextPrefab) {
-            ShowHealthText(damage);
-        }
+            // Show floating text
+            if (healthTextPrefab) {
+                ShowHealthText(damage);
+            }
+
+            // Set invulnerability to true after getting hit
+            StartCoroutine(InvulnerabilityCoroutine());
+            }
     }
     
     void ShowHealthText(float damage) {
@@ -59,5 +65,13 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         yield return new WaitForSeconds(0.2f);
         // Restore the original color
         spriteRenderer.color = originalColor;
+    }
+
+    private IEnumerator InvulnerabilityCoroutine() {
+        isInvulnerable = true;
+        // Wait for 0.5 seconds
+        yield return new WaitForSeconds(0.5f);
+        // Reset the invulnerability flag
+        isInvulnerable = false;
     }
 }

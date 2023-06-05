@@ -10,10 +10,16 @@ public class Slime : MonoBehaviour
     Animator animator;
     public DetectionZone detectionZone;
     Rigidbody2D rb;
+    Collider2D playerCollider;
+    public bool isCollidingWithPlayer = false;
+    float damageTimer = 0f;
+    // damageInterval set to be same as Invulnerability timer
+    public float damageInterval = 0.5f;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
     }
 
     void FixedUpdate() {
@@ -33,20 +39,42 @@ public class Slime : MonoBehaviour
         } else {
             animator.SetFloat("Speed", 0f);
         }
+
+        // While Slime is in contact with Player, run damageTimer to 0.5 seconds then deal damage again
+        if (isCollidingWithPlayer) {
+            damageTimer += Time.deltaTime;
+            if (damageTimer > damageInterval) {
+                    DealDamage();
+                    damageTimer = 0f;
+            }
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.tag == "Player") {
+            // On first collision, deal damage to Player
+            DealDamage();
+            // Set collision state to true
+            isCollidingWithPlayer = true;
+        }
+    }
 
-            IDamageable damageable = col.collider.GetComponent<IDamageable>();
+    void OnCollisionExit2D(Collision2D col) {
+        if (col.gameObject.tag == "Player") {
+            // Set collision state to false
+            isCollidingWithPlayer = false;
+        }
+    }
+
+    void DealDamage() {
+        IDamageable damageable = playerCollider.GetComponent<IDamageable>();
             
             if (damageable != null) {
                 
-                Vector2 direction = (col.collider.transform.position - transform.position);
+                Vector2 direction = (playerCollider.transform.position - transform.position);
                 Vector2 knockback = direction * knockbackForce;
 
                 damageable.OnHit(damage, knockback);
             }
-        }
     }
 }

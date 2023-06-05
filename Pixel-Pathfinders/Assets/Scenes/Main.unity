@@ -32519,6 +32519,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 577300443}
     - target: {fileID: 5420940771572585839, guid: 6fa6f0a138443d743a3683089c736f8a, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420940771572585839, guid: 6fa6f0a138443d743a3683089c736f8a, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 5185099487564613658, guid: f89c89e6c55cb1743bb670f08ebad44a, type: 3}
@@ -32526,6 +32530,10 @@ PrefabInstance:
       propertyPath: healthTextPrefab
       value: 
       objectReference: {fileID: 1431593783794525319, guid: 1f25767df12f85341bfa8986872fe383, type: 3}
+    - target: {fileID: 6129460911073275028, guid: 6fa6f0a138443d743a3683089c736f8a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6418317928373784323, guid: 6fa6f0a138443d743a3683089c736f8a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -32567,6 +32575,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1548852421938897148, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548852421938897148, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3424866215178120402, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -32615,6 +32631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 5635155532400228924, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6845023011467276314, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
       propertyPath: damage
       value: 2
@@ -32627,6 +32647,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 6845023011467276314, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
+      propertyPath: damageInterval
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7099964993578106781, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
       propertyPath: healthText
       value: 
@@ -32635,5 +32659,9 @@ PrefabInstance:
       propertyPath: healthTextPrefab
       value: 
       objectReference: {fileID: 1431593783794525319, guid: 1f25767df12f85341bfa8986872fe383, type: 3}
+    - target: {fileID: 8964858863658348957, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a72fd62eb708b54abd793132b1a589e, type: 3}
