@@ -38,8 +38,8 @@ public class SwordHitbox : MonoBehaviour
         IDamageable damageableObject = collider.GetComponent<IDamageable>();
 
         if (damageableObject != null) {
+            
             Vector2 direction = (collider.transform.position - transform.parent.position);
-           // Debug.Log("collider pos: " + collider.transform.position + " parentPos: " + transform.parent.position);
             Vector2 knockback = direction * knockbackForce;
 
             damageableObject.OnHit(swordDamage, knockback);

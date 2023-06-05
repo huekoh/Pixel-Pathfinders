@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DamageableCharacter : MonoBehaviour, IDamageable
@@ -9,15 +10,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     SpriteRenderer spriteRenderer;
     Color originalColor;
     bool isAlive = true;
-    public float Health {
-        set {
-            health = value;
-        }
-        get {
-            return health;
-        }
-    }
-
+    public GameObject healthTextPrefab;
     public float health = 5;
 
     public void Start() {
@@ -29,21 +22,32 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
     public void OnHit(float damage, Vector2 knockback)
     {
-        Health -= damage;
+        health -= damage;
         rb.AddForce(knockback);
-        // Change color of slime to red everytime it's hit
+
+        // Change color of character to red everytime it's hit
         spriteRenderer.color = Color.red;
         StartCoroutine(RestoreColorCoroutine());
 
-        // If health <= 0, destroy slime after 0.3 seconds
+        // If health <= 0, destroy character after 0.3 seconds
         if (health <= 0) {
             Invoke("DestroySelf", 0.3f);
         }
+
+        // Show floating text
+        if (healthTextPrefab) {
+            ShowHealthText(damage);
+        }
+    }
+    
+    void ShowHealthText(float damage) {
+        var text = Instantiate(healthTextPrefab, transform.position, Quaternion.identity, transform);
+        text.GetComponent<TextMeshPro>().text = damage.ToString();
     }
 
     public void OnHit(float damage)
     {
-        Health -= damage;
+        health -= damage;
     }
 
     public void DestroySelf() {
