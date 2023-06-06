@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a0a073b4ac48934468848e1188d8a3b7
+guid: a20066d22bc0253408de2a0a424a915a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharaNude_0
+      name: chara_25 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1b145a37fa88134e8000c0b345e14d3
-      internalID: 728441485
+      spriteID: b25878f071d292240ad80a6d20bd21f7
+      internalID: 2139635098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_1
+      name: chara_25 1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 272d0249597964345a8568a59e859a08
-      internalID: -1080555113
+      spriteID: 9b6be0a3e8b2c0444b516c1535c1fa1b
+      internalID: -1594690996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_2
+      name: chara_25 1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -173,35 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 142d2dec446f6a341848d62b3ced8eb8
-      internalID: -275014489
+      spriteID: 724e2b53db103884a8261688e0bef77e
+      internalID: 901103034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b1b4c23db7285e4cb2d1a0bf2b01060
-      internalID: 2014525147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharaNude_4
+      name: chara_25 1_3
       rect:
         serializedVersion: 2
         x: 0
@@ -215,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 195657e6a205ce54d80705e8ff7f4861
-      internalID: -1869267919
+      spriteID: 5a2c70a385b7cb7478ba510f71a42aaf
+      internalID: -2046286611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_5
+      name: chara_25 1_4
       rect:
         serializedVersion: 2
         x: 16
@@ -236,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3106b93b0547ae54ead2cbcfb8868589
-      internalID: 185360090
+      spriteID: ad6b933c142d244429ffbf4f4d552914
+      internalID: -223686731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_6
+      name: chara_25 1_5
       rect:
         serializedVersion: 2
         x: 32
@@ -257,35 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92aab8278f35afe4497fdd8f36a50006
-      internalID: 1137917210
+      spriteID: a32345a855b884249986c6db94f3a8d3
+      internalID: -754028877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_7
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a023855526f8a847b050719b27c086c
-      internalID: -1889571636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharaNude_8
+      name: chara_25 1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -299,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7408db09647e6804eab6f51f62132b59
-      internalID: -1392758515
+      spriteID: 3dcc82eaa199d744f9bb1218f3a74662
+      internalID: -1456153759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_9
+      name: chara_25 1_7
       rect:
         serializedVersion: 2
         x: 16
@@ -320,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5e03a791b86ed84c9b89fa875f6f07a
-      internalID: -1052390154
+      spriteID: 6f126cb1fd0649c4d8867e8f9b38cc14
+      internalID: -1153471719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_10
+      name: chara_25 1_8
       rect:
         serializedVersion: 2
         x: 32
@@ -341,35 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac0580f58eadfd04a9de1e228c347451
-      internalID: -852521456
+      spriteID: a6661deb772adc145a508cdc9e3dfe6c
+      internalID: -1891732915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 097e4f533779eab41817c5d324080289
-      internalID: -961902260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharaNude_12
+      name: chara_25 1_9
       rect:
         serializedVersion: 2
         x: 0
@@ -383,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f15c5d7c2b8072a4a96649e9633c08a2
-      internalID: 119631485
+      spriteID: a7326f2556c063b418f97b1808d9ec4c
+      internalID: -1616020254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_13
+      name: chara_25 1_10
       rect:
         serializedVersion: 2
         x: 16
@@ -404,14 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f71bae8ca9023394bbf1e15014121209
-      internalID: -231121961
+      spriteID: 6a6665174c95e2d4eab26c0f061e4bfb
+      internalID: 1315473916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_14
+      name: chara_25 1_11
       rect:
         serializedVersion: 2
         x: 32
@@ -425,35 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d5375ec8c3586743b7be7f6adee9a5a
-      internalID: -2073683217
+      spriteID: 05fdbe86da0783a40a4f3cd3309b4e15
+      internalID: 1217782758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_15
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c35b70a1801a7c45b8cf882a52efe28
-      internalID: 1008110766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharaNude_16
+      name: chara_25 1_12
       rect:
         serializedVersion: 2
         x: 0
@@ -467,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e61a9214fb936e041afd400bb9b26562
-      internalID: 1821964607
+      spriteID: 42070c276aaa9e64694265005a1249ae
+      internalID: -1039858167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_17
+      name: chara_25 1_13
       rect:
         serializedVersion: 2
         x: 16
@@ -488,14 +404,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70cbd6039c5544048a15c121249e7452
-      internalID: -1225886696
+      spriteID: d566d8ba8e6b512449b56752a350c72c
+      internalID: 1110497871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharaNude_18
+      name: chara_25 1_14
       rect:
         serializedVersion: 2
         x: 32
@@ -509,29 +425,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 783649d28a2163a4aaeb7aae6620d8d3
-      internalID: 954300351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharaNude_19
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fbf88f208bf73b4d95da34f1dc557e9
-      internalID: 27057455
+      spriteID: 0751510d480bed346bc96302f3093a38
+      internalID: 2115894741
       vertices: []
       indices: 
       edges: []
@@ -547,26 +442,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharaNude_0: 728441485
-      CharaNude_1: -1080555113
-      CharaNude_10: -852521456
-      CharaNude_11: -961902260
-      CharaNude_12: 119631485
-      CharaNude_13: -231121961
-      CharaNude_14: -2073683217
-      CharaNude_15: 1008110766
-      CharaNude_16: 1821964607
-      CharaNude_17: -1225886696
-      CharaNude_18: 954300351
-      CharaNude_19: 27057455
-      CharaNude_2: -275014489
-      CharaNude_3: 2014525147
-      CharaNude_4: -1869267919
-      CharaNude_5: 185360090
-      CharaNude_6: 1137917210
-      CharaNude_7: -1889571636
-      CharaNude_8: -1392758515
-      CharaNude_9: -1052390154
+      chara_25 1_0: 2139635098
+      chara_25 1_1: -1594690996
+      chara_25 1_10: 1315473916
+      chara_25 1_11: 1217782758
+      chara_25 1_12: -1039858167
+      chara_25 1_13: 1110497871
+      chara_25 1_14: 2115894741
+      chara_25 1_2: 901103034
+      chara_25 1_3: -2046286611
+      chara_25 1_4: -223686731
+      chara_25 1_5: -754028877
+      chara_25 1_6: -1456153759
+      chara_25 1_7: -1153471719
+      chara_25 1_8: -1891732915
+      chara_25 1_9: -1616020254
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

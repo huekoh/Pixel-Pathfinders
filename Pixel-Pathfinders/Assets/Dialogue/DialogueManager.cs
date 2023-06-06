@@ -10,10 +10,16 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI displayNameText;
+    [SerializeField] private Animator portraitAnimator;
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private static DialogueManager instance;
+
+    private const string SPEAKER_TAG = "speaker";
+    private const string PORTRAIT_TAG = "portrait";
+    private const string LAYOUT_TAG = "layout";
 
     private void Awake() {
         if (instance != null) {
@@ -65,8 +71,38 @@ public class DialogueManager : MonoBehaviour
     private void ContinueStory() {
         if (currentStory.canContinue) {
             dialogueText.text = currentStory.Continue();
+            HandleTags(currentStory.currentTags);
         } else {
             StartCoroutine(ExitDialogueCoroutine());
+        }
+    }
+
+    private void HandleTags(List<string> currentTags) {
+        // Loop through and handle each tag
+        foreach (string tag in currentTags) {
+            // Parse the tag
+            string[] splitTag = tag.Split(':');
+            if (splitTag.Length != 2) {
+                Debug.LogError(" Tag could not be appropriately parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            // Handle the tag
+            switch (tagKey) {
+                case SPEAKER_TAG:
+                    displayNameText.text = tagValue;
+                    break;
+                case PORTRAIT_TAG:
+                    portraitAnimator.Play(tagValue);
+                    break;
+                case LAYOUT_TAG:
+                    Debug.Log("speaker=" + tagValue);
+                    break;
+                default:
+                    Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                    break;
+            }
         }
     }
 }
