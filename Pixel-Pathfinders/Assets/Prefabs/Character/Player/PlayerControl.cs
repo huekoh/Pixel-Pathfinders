@@ -34,6 +34,10 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+            return; 
+        }
+        
         if (canMove == true) {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
@@ -57,7 +61,9 @@ public class PlayerControl : MonoBehaviour
     }
 
     void OnFire() {
-        animator.SetTrigger("swordAttack");
+        if (!DialogueManager.GetInstance().dialogueIsPlaying) {
+            animator.SetTrigger("swordAttack");
+        }
     }
 
     void LockMovement() {
