@@ -48,8 +48,6 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-
-        ContinueStory();
     }
 
     private void ExitDialogueMode() {

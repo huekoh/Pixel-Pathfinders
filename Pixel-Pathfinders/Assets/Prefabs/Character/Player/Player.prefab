@@ -204,9 +204,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.24556875
+  m_Radius: 0.37
 --- !u!114 &7482573063214606213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b0ef37cdc013044b66319c70be9b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthTextPrefab: {fileID: 0}
   health: 5
 --- !u!1 &5018674239390614783
 GameObject:
