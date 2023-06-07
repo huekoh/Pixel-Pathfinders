@@ -68,6 +68,14 @@ public class DialogueManager : MonoBehaviour
         ExitDialogueMode();
     }
 
+    /*private IEnumerator TypeText(string text) {
+        dialogueText.text = "";
+        foreach (char c in text) {
+            dialogueText.text += c;
+            yield return new WaitForSeconds(0.03f);
+        }
+    }*/
+
     private void ContinueStory() {
         if (currentStory.canContinue) {
             dialogueText.text = currentStory.Continue();
