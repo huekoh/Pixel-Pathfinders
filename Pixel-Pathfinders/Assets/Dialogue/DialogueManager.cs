@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
+    private bool isTyping;
     private static DialogueManager instance;
 
     private const string SPEAKER_TAG = "speaker";
@@ -34,6 +35,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start() {
         dialogueIsPlaying = false;
+        isTyping = false;
         dialoguePanel.SetActive(false);
     }
 
@@ -45,7 +47,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // handle continuation of dialogue to next line if E is pressed
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E) && !isTyping) {
             ContinueStory();
         }
     }
@@ -68,17 +70,20 @@ public class DialogueManager : MonoBehaviour
         ExitDialogueMode();
     }
 
-    /*private IEnumerator TypeText(string text) {
+    private IEnumerator TypeText(string text) {
         dialogueText.text = "";
+        isTyping = true;
         foreach (char c in text) {
             dialogueText.text += c;
             yield return new WaitForSeconds(0.03f);
         }
-    }*/
+        isTyping = false;
+    }
 
     private void ContinueStory() {
         if (currentStory.canContinue) {
             dialogueText.text = currentStory.Continue();
+            StartCoroutine(TypeText(dialogueText.text));
             HandleTags(currentStory.currentTags);
         } else {
             StartCoroutine(ExitDialogueCoroutine());
