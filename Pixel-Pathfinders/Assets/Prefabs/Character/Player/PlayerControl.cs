@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     SpriteRenderer spriteRenderer;
     private Vector2 movement;
     bool canMove = true;
+    public VectorValue startingPosition;
 
     private static bool playerExists;
 
@@ -20,15 +21,7 @@ public class PlayerControl : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         swordCollider = swordHitbox.GetComponent<Collider2D>();
-
-        //to prevent duplicates of player when swapping scenes
-        if(!playerExists)
-        {
-            playerExists = true;
-            DontDestroyOnLoad(transform.gameObject);
-        } else {
-            Destroy(gameObject);
-        }
+        transform.position = startingPosition.initialValue;
     }
 
     // Update is called once per frame
