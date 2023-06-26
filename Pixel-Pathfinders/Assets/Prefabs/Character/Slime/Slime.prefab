@@ -160,10 +160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d98413e9b4f0c448568128f886859a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   knockbackForce: 1500
-  moveSpeed: 5
+  moveSpeed: 700
   detectionZone: {fileID: 4546694577921979396}
+  isCollidingWithPlayer: 0
+  damageInterval: 0.5
 --- !u!114 &7099964993578106781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b0ef37cdc013044b66319c70be9b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthTextPrefab: {fileID: 1431593783794525319, guid: 1f25767df12f85341bfa8986872fe383, type: 3}
   health: 3
 --- !u!1 &5635155532400228924
 GameObject:
