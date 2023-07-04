@@ -28,10 +28,10 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         if (DialogueManager.GetInstance().dialogueIsPlaying) {
-            return; 
+            animator.SetFloat("Speed", 0);
         }
         
-        if (canMove == true) {
+        if (canMove == true && !DialogueManager.GetInstance().dialogueIsPlaying) {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
@@ -48,7 +48,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (canMove == true) {
+        if (canMove == true && !DialogueManager.GetInstance().dialogueIsPlaying) {
             rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
         }
     }

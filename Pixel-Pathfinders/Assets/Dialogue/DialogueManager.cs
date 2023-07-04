@@ -20,7 +20,6 @@ public class DialogueManager : MonoBehaviour
 
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
-    private const string LAYOUT_TAG = "layout";
 
     private void Awake() {
         if (instance != null) {
@@ -56,6 +55,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        ContinueStory();
     }
 
     private void ExitDialogueMode() {
@@ -108,9 +108,6 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
-                    break;
-                case LAYOUT_TAG:
-                    Debug.Log("speaker=" + tagValue);
                     break;
                 default:
                     Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
