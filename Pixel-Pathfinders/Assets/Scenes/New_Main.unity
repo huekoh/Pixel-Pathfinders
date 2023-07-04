@@ -9270,6 +9270,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1234046429}
   displayNameText: {fileID: 1151151062}
   portraitAnimator: {fileID: 1890211197}
+  Inventory: {fileID: 1407595797}
 --- !u!4 &1234532000
 Transform:
   m_ObjectHideFlags: 0
@@ -11773,6 +11774,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
+--- !u!1 &1407595797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7996465217130523134, guid: 69767fff31e9bca46956995f13e5239d, type: 3}
+  m_PrefabInstance: {fileID: 7996465216172650280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1561126083
 GameObject:
   m_ObjectHideFlags: 0
@@ -19827,6 +19833,10 @@ PrefabInstance:
     - target: {fileID: 7996465217130523134, guid: 69767fff31e9bca46956995f13e5239d, type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996465217130523134, guid: 69767fff31e9bca46956995f13e5239d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7996465217130523135, guid: 69767fff31e9bca46956995f13e5239d, type: 3}
       propertyPath: m_Pivot.x
