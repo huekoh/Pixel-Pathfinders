@@ -13,7 +13,6 @@ public class PlayerControl : MonoBehaviour
     private Vector2 movement;
     bool canMove = true;
     public VectorValue startingPosition;
-
     private static bool playerExists;
 
     void Start() {
