@@ -15,7 +15,7 @@ public class ItemPickup : MonoBehaviour
     {
         playerInRange = false;
         isPickedUp = false;
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.Find("InventoryManager").GetComponent<Inventory>();
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class ItemPickup : MonoBehaviour
                             Instantiate(itemButton, inventory.slots[i].transform, false);
                         } else if (inventory.itemType[i] == typeOfItem) {
                             inventory.itemCount[i]++;
-                            Debug.Log("Item count " + inventory.itemCount[i]);
+                            //Debug.Log("Item count " + inventory.itemCount[i]);
                         } else {
                             continue;
                         }

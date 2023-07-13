@@ -8,7 +8,7 @@ public class Slot : MonoBehaviour
     public int slotNumber;
 
     private void Start() {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.Find("InventoryManager").GetComponent<Inventory>();
     }
 
     private void Update() {
@@ -23,7 +23,9 @@ public class Slot : MonoBehaviour
                     child.GetComponent<Spawn>().SpawnDroppedItem();
                     inventory.itemCount[slotNumber]--;
                     inventory.slotHasItems[slotNumber] = false;
+                    //set that slot to have no items
                     inventory.itemType[slotNumber] = "";
+                    //set that slot itemType back to nothing
                     GameObject.Destroy(child.gameObject);
             }
 

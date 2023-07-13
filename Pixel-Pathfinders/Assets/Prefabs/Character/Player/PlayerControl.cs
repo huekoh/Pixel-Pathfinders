@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -53,6 +54,9 @@ public class PlayerControl : MonoBehaviour
     }
 
     void OnFire() {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+            
         if (!DialogueManager.GetInstance().dialogueIsPlaying) {
             animator.SetTrigger("swordAttack");
         }
