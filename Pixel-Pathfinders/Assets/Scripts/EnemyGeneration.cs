@@ -26,7 +26,8 @@ public class EnemyGeneration : MonoBehaviour
             yPos = Random.Range(-2,4);
             Instantiate(theEnemy, new Vector3(xPos, yPos, 0), Quaternion.identity);
             yield return new WaitForSeconds(buffer);
-            counter += 1;
+            counter += 2;
+            counter -= 1;
         }
     }
 }
