@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+//using UnityEngine.EventSystems;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     bool canMove = true;
     public VectorValue startingPosition;
     private static bool playerExists;
+    public InventoryObject equipmentInventory;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -54,6 +56,10 @@ public class PlayerControl : MonoBehaviour
     }
 
     void OnFire() {
+        if (equipmentInventory.Container.Items[0].ID == -1) {
+            Debug.Log("No Sword is equipped!");
+            return;
+        }
         if (EventSystem.current.IsPointerOverGameObject())
             return;
             

@@ -29,13 +29,6 @@ public class SceneSwap : MonoBehaviour {
         if(other.gameObject.name == "Player" && !other.isTrigger)
         {
             playerStorage.initialValue = playerPosition;
-            Inventory inventory = FindObjectOfType<Inventory>();
-            // Don't destroy the Inventory object when loading a new scene
-            DontDestroyOnLoad(inventory.gameObject);
-            Canvas canvas = FindObjectOfType<Canvas>();
-            DontDestroyOnLoad(canvas.gameObject);
-            // Don't destroy the Canvas object when loading a new scene
-            // Buttons are found under Canvas, therefore the need to keep Canvas
             StartCoroutine(FadeCo());
         }
     }
