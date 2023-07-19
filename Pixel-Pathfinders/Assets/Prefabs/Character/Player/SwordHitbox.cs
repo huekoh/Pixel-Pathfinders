@@ -5,8 +5,9 @@ using UnityEngine;
 public class SwordHitbox : MonoBehaviour
 {
     public Collider2D swordCollider;
-    public float swordDamage = 1f;
+    private float swordDamage;
     public float knockbackForce = 5f;
+    public InventoryObject playerEquipment;
     public Vector3 faceDown = new Vector3(0, -0.38f, 0);
     public Vector3 faceUp = new Vector3(0, 0.38f, 0);
     public Vector3 faceLeft = new Vector3(-0.38f, 0, 0);
@@ -20,6 +21,11 @@ public class SwordHitbox : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        swordDamage = playerEquipment.Container.Items[0].item.buffs[0].value;
+    }
+
     void setDirection(Vector2 direction) {
         if (direction.y == -1) {
             gameObject.transform.localPosition = faceDown;
@@ -30,7 +36,6 @@ public class SwordHitbox : MonoBehaviour
         } else if (direction.x == -1) {
             gameObject.transform.localPosition = faceLeft;
         }
-        //Debug.Log("Collision pos: " + gameObject.transform.localPosition);
     }
 
     void OnTriggerEnter2D(Collider2D collider) {

@@ -16,7 +16,7 @@ public class PlayerControl : MonoBehaviour
     bool canMove = true;
     public VectorValue startingPosition;
     private static bool playerExists;
-    public InventoryObject equipmentInventory;
+    public InventoryObject playerEquipment;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -56,7 +56,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     void OnFire() {
-        if (equipmentInventory.Container.Items[0].ID == -1) {
+        if (playerEquipment.Container.Items[0].item.Id == -1) {
             Debug.Log("No Sword is equipped!");
             return;
         }

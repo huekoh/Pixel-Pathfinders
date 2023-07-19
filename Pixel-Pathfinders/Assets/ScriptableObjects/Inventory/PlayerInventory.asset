@@ -16,63 +16,63 @@ MonoBehaviour:
   database: {fileID: 11400000, guid: 45d2546d9d58b24448bd21b40f676b2e, type: 2}
   Container:
     Items:
-    - ID: -1
+    - AllowedItems: 
       item:
-        Name: 
+        Name: Arrow
+        Id: 1
+        buffs: []
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: Shield
+        Id: 3
+        buffs: []
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: Health Potion
         Id: 0
         buffs: []
-      amount: 0
-    - ID: -1
+      amount: 8
+    - AllowedItems: 
+      item:
+        Name: Shield
+        Id: 3
+        buffs: []
+      amount: 1
+    - AllowedItems: 
       item:
         Name: 
-        Id: 0
+        Id: -1
         buffs: []
       amount: 0
-    - ID: -1
+    - AllowedItems: 
       item:
         Name: 
-        Id: 0
+        Id: -1
         buffs: []
       amount: 0
-    - ID: -1
+    - AllowedItems: 
       item:
         Name: 
-        Id: 0
+        Id: -1
         buffs: []
       amount: 0
-    - ID: -1
+    - AllowedItems: 
       item:
         Name: 
-        Id: 0
+        Id: -1
         buffs: []
       amount: 0
-    - ID: -1
+    - AllowedItems: 
       item:
         Name: 
-        Id: 0
+        Id: -1
         buffs: []
       amount: 0
-    - ID: -1
+    - AllowedItems: 
       item:
         Name: 
-        Id: 0
-        buffs: []
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-        buffs: []
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-        buffs: []
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
+        Id: -1
         buffs: []
       amount: 0

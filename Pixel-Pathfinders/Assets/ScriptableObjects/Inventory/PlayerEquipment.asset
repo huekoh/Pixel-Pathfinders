@@ -17,20 +17,15 @@ MonoBehaviour:
   Container:
     Items:
     - AllowedItems: 01000000
-      parent: {fileID: 0}
-      ID: -1
+      item:
+        Name: Sword
+        Id: 2
+        buffs:
+        - value: 2
+      amount: 1
+    - AllowedItems: 02000000
       item:
         Name: 
         Id: -1
         buffs: []
       amount: 0
-    - AllowedItems: 02000000
-      parent: {fileID: 0}
-      ID: 2
-      item:
-        Name: Shield
-        Id: 2
-        buffs:
-        - attribute: 1
-          value: 1
-      amount: 1

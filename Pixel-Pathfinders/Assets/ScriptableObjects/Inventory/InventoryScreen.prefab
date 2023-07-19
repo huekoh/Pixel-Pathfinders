@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77843bba2eea7204a801f2a0b286b60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   inventory: {fileID: 11400000, guid: 59dc2fe0355438f45954d5eabd7bc8ca, type: 2}
   inventoryPrefab: {fileID: 8300758390668580948, guid: 07df5dd52d820b44c83f9aeea3fab3b6, type: 3}
 --- !u!114 &1726417804292401770

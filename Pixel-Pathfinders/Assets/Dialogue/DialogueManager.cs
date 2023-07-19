@@ -12,7 +12,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
-    [SerializeField] private GameObject Inventory;
+    [SerializeField] private GameObject inventoryScreen;
+    [SerializeField] private GameObject equipmentScreen;
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
@@ -55,14 +56,16 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON) {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-        Inventory.SetActive(false);
+        inventoryScreen.SetActive(false);
+        equipmentScreen.SetActive(false);
         dialoguePanel.SetActive(true);
         ContinueStory();
     }
 
     private void ExitDialogueMode() {
         dialogueIsPlaying = false;
-        Inventory.SetActive(true);
+        inventoryScreen.SetActive(true);
+        equipmentScreen.SetActive(true);
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
     }

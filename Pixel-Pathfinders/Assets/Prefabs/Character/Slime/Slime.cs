@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
-    public float damage = 1;
-    public float knockbackForce = 5f;
-    public float moveSpeed= 5f;
+    public float damage;
+    public float knockbackForce;
+    public float moveSpeed;
+    public InventoryObject playerEquipment;
+    private float shieldProtectionValue;
     Animator animator;
     public DetectionZone detectionZone;
     Rigidbody2D rb;
@@ -14,15 +16,22 @@ public class Slime : MonoBehaviour
     public bool isCollidingWithPlayer = false;
     float damageTimer = 0f;
     // damageInterval set to be same as Invulnerability timer
-    public float damageInterval = 0.5f;
+    public float damageInterval;
 
-    void Start() {
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
     }
 
-    void FixedUpdate() {
+    void Update()
+    {
+        shieldProtectionValue = playerEquipment.Container.Items[1].item.buffs[0].value;
+    }
+
+    void FixedUpdate()
+    {
         if (detectionZone.detectedObjects.Count > 0) {
             // Calculate direction to player
             Vector2 direction = (detectionZone.detectedObjects[0].transform.position - transform.position).normalized;
@@ -31,7 +40,8 @@ public class Slime : MonoBehaviour
 
             animator.SetFloat("Speed", moveSpeed);
 
-            if (direction.x > 0) {
+            if (direction.x > 0)
+            {
                 animator.SetFloat("Direction.x", 1);
             } else if (direction.x < 0) {
                 animator.SetFloat("Direction.x", -1);
@@ -41,17 +51,21 @@ public class Slime : MonoBehaviour
         }
 
         // While Slime is in contact with Player, run damageTimer to 0.5 seconds then deal damage again
-        if (isCollidingWithPlayer) {
+        if (isCollidingWithPlayer)
+        {
             damageTimer += Time.deltaTime;
-            if (damageTimer > damageInterval) {
+            if (damageTimer > damageInterval)
+            {
                     DealDamage();
                     damageTimer = 0f;
             }
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.tag == "Player") {
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
             // On first collision, deal damage to Player
             DealDamage();
             // Set collision state to true
@@ -59,14 +73,17 @@ public class Slime : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D col) {
-        if (col.gameObject.tag == "Player") {
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
             // Set collision state to false
             isCollidingWithPlayer = false;
         }
     }
 
-    void DealDamage() {
+    void DealDamage()
+    {
         IDamageable damageable = playerCollider.GetComponent<IDamageable>();
             
             if (damageable != null) {
@@ -74,7 +91,7 @@ public class Slime : MonoBehaviour
                 Vector2 direction = (playerCollider.transform.position - transform.position);
                 Vector2 knockback = direction * knockbackForce;
 
-                damageable.OnHit(damage, knockback);
+                damageable.OnHit(damage - shieldProtectionValue, knockback);
             }
     }
 }
