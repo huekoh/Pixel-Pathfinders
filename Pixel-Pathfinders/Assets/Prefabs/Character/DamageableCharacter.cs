@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageableCharacter : MonoBehaviour, IDamageable
 {
@@ -12,19 +13,29 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     //bool isAlive = true;
     bool isInvulnerable = false;
     public GameObject healthTextPrefab;
-    public float health = 5;
+    public float health;
+    public float maxHealth;
+
+    [SerializeField] EnemyHealthBar healthBar;
+
+    public void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        healthBar = GetComponentInChildren<EnemyHealthBar>();
+    }
 
     public void Start() {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        healthBar.UpdateHealthBar(health, maxHealth);
     }
 
     public void OnHit(float damage, Vector2 knockback)
     {
         if (!isInvulnerable) {
             health -= damage;
+            healthBar.UpdateHealthBar(health, maxHealth);
             rb.AddForce(knockback);
 
             // Change color of character to red everytime it's hit
