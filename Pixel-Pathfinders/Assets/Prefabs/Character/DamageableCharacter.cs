@@ -15,8 +15,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     public GameObject healthTextPrefab;
     public float health;
     public float maxHealth;
-
-    [SerializeField] EnemyHealthBar healthBar;
+    private EnemyHealthBar healthBar;
 
     public void Awake()
     {
@@ -24,19 +23,26 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         healthBar = GetComponentInChildren<EnemyHealthBar>();
     }
 
-    public void Start() {
+    public void Start()
+    {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
-        healthBar.UpdateHealthBar(health, maxHealth);
+        if (!isPlayer())
+        {
+            healthBar.UpdateHealthBar(health, maxHealth);
+        }
     }
 
     public void OnHit(float damage, Vector2 knockback)
     {
         if (!isInvulnerable) {
             health -= damage;
-            healthBar.UpdateHealthBar(health, maxHealth);
             rb.AddForce(knockback);
+            if (!isPlayer())
+            {
+                healthBar.UpdateHealthBar(health, maxHealth);
+            }
 
             // Change color of character to red everytime it's hit
             spriteRenderer.color = Color.red;
@@ -56,8 +62,14 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             StartCoroutine(InvulnerabilityCoroutine());
             }
     }
+
+    public bool isPlayer()
+    {
+        return gameObject.CompareTag("Player");
+    }
     
-    void ShowHealthText(float damage) {
+    void ShowHealthText(float damage)
+    {
         var text = Instantiate(healthTextPrefab, transform.position, Quaternion.identity, transform);
         text.GetComponent<TextMeshPro>().text = damage.ToString();
     }
@@ -71,14 +83,16 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         Destroy(gameObject);
     }
 
-    private IEnumerator RestoreColorCoroutine() {
+    private IEnumerator RestoreColorCoroutine()
+    {
         // Wait for 0.2 seconds
         yield return new WaitForSeconds(0.2f);
         // Restore the original color
         spriteRenderer.color = originalColor;
     }
 
-    private IEnumerator InvulnerabilityCoroutine() {
+    private IEnumerator InvulnerabilityCoroutine()
+    {
         isInvulnerable = true;
         // Wait for 0.5 seconds
         yield return new WaitForSeconds(0.5f);

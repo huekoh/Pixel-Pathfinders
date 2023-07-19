@@ -4311,6 +4311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2338499551446252316, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2338499551757956328, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
       value: 0
@@ -20870,6 +20874,10 @@ PrefabInstance:
     - target: {fileID: 2915775206794784837, guid: bf2ffa877c4653341aaed687856e563a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915775206794784843, guid: bf2ffa877c4653341aaed687856e563a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2915775207422083006, guid: bf2ffa877c4653341aaed687856e563a, type: 3}
       propertyPath: camera

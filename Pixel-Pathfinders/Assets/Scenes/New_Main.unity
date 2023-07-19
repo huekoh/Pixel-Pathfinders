@@ -22080,8 +22080,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2338499551446252307, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2338499551446252316, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
       propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338499551757956328, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2338499551757956329, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
@@ -22094,11 +22102,15 @@ PrefabInstance:
       objectReference: {fileID: 6418317927148168634}
     - target: {fileID: 2338499552054920282, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2338499552054920282, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726569618168833409, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+      propertyPath: maxHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3313623902381307017, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
       propertyPath: m_Name
