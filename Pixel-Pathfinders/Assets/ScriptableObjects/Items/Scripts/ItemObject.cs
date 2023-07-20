@@ -29,7 +29,7 @@ public class ItemObject : ScriptableObject
 public class Item {
     public string Name;
     public int Id = -1;
-    public ItemBuff[] buffs;
+    public int itemValue;
     public Item() {
         Name = "";
         Id = -1;
@@ -37,17 +37,6 @@ public class Item {
     public Item(ItemObject item) {
         Name = item.name;
         Id = item.data.Id;
-        buffs = new ItemBuff[item.data.buffs.Length];
-        for (int i = 0; i < buffs.Length; i++) {
-            buffs[i] = new ItemBuff(item.data.buffs[i].value);
-        }
-    }
-}
-
-[System.Serializable]
-public class ItemBuff {
-    public int value;
-    public ItemBuff(int _value) {
-        value = _value;
+        itemValue = item.data.itemValue;
     }
 }

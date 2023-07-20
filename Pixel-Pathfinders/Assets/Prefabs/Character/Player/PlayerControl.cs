@@ -13,12 +13,13 @@ public class PlayerControl : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
     private Vector2 movement;
-    bool canMove = true;
+    private bool canMove = true;
     public VectorValue startingPosition;
     private static bool playerExists;
     public InventoryObject playerEquipment;
 
-    void Start() {
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -29,11 +30,20 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
             animator.SetFloat("Speed", 0);
         }
+
+        if (playerEquipment.Container.Items[1].item.Id >= 0)
+        {
+            animator.SetBool("isHoldingShield", true);
+        } else {
+            animator.SetBool("isHoldingShield", false);
+        }
         
-        if (canMove == true && !DialogueManager.GetInstance().dialogueIsPlaying) {
+        if (canMove == true && !DialogueManager.GetInstance().dialogueIsPlaying)
+        {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
@@ -49,30 +59,36 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         if (canMove == true && !DialogueManager.GetInstance().dialogueIsPlaying) {
             rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
         }
     }
 
-    void OnFire() {
-        if (playerEquipment.Container.Items[0].item.Id == -1) {
+    void OnFire()
+    {
+        if (playerEquipment.Container.Items[0].item.Id == -1)
+        {
             Debug.Log("No Sword is equipped!");
             return;
         }
         if (EventSystem.current.IsPointerOverGameObject())
             return;
             
-        if (!DialogueManager.GetInstance().dialogueIsPlaying) {
+        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        {
             animator.SetTrigger("swordAttack");
         }
     }
 
-    void LockMovement() {
+    void LockMovement()
+    {
         canMove = false;
     }
 
-    void UnlockMovement() {
+    void UnlockMovement()
+    {
         canMove = true;
     }
 }
