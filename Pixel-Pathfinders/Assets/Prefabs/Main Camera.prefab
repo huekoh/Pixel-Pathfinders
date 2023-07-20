@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecfc64e3e571142439316829437f939f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothing: 0.05
   target: {fileID: 0}
-  smoothing: 2
   maxPosition: {x: 2.5, y: 2.9}
   minPosition: {x: -3.2, y: -3.2}
