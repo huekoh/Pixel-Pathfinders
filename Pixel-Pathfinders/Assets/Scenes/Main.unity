@@ -2522,6 +2522,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1444444810}
   displayNameText: {fileID: 837698832}
   portraitAnimator: {fileID: 0}
+  inventoryScreen: {fileID: 0}
+  equipmentScreen: {fileID: 0}
 --- !u!4 &338553412
 Transform:
   m_ObjectHideFlags: 0
@@ -4081,6 +4083,7 @@ MonoBehaviour:
   sceneToLoad: 
   playerPosition: {x: 0, y: 0}
   playerStorage: {fileID: 0}
+  player: {fileID: 0}
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 0}
   fadeWait: 0

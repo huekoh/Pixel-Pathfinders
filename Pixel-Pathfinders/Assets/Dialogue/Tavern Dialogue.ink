@@ -1,0 +1,1 @@
+Welcome, adventurer! Find all you need for your journey. #speaker: Jennifer #portrait: Jennifer_Neutral

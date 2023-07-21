@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class ShopManager : MonoBehaviour
-{
-
+{   
     public int coins;
     public TMP_Text coinUI;
     public ItemObject[] itemObjectSO;
@@ -15,6 +14,7 @@ public class ShopManager : MonoBehaviour
     public Button[] purchaseButtons;
 
     // Start is called before the first frame update
+    
     void Start()
     {
         for (int i = 0; i < itemObjectSO.Length; i++)
@@ -29,7 +29,6 @@ public class ShopManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void AddCoins()

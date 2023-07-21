@@ -38,6 +38,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         if (!isInvulnerable) {
             health -= damage;
             rb.AddForce(knockback);
+
             if (!isPlayer())
             {
                 healthBar.UpdateHealthBar(health, maxHealth);
