@@ -10,7 +10,6 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
     Color originalColor;
-    //bool isAlive = true;
     bool isInvulnerable = false;
     public GameObject healthTextPrefab;
     public float health;
@@ -72,11 +71,6 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     {
         var text = Instantiate(healthTextPrefab, transform.position, Quaternion.identity, transform);
         text.GetComponent<TextMeshPro>().text = damage.ToString();
-    }
-
-    public void OnHit(float damage)
-    {
-        health -= damage;
     }
 
     public void DestroySelf() {
