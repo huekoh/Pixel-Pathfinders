@@ -13,6 +13,7 @@ public class ShopManager : MonoBehaviour
     public Button[] purchaseButtons;
     public InventoryObject coinInventory;
     public InventoryObject inventory;
+    private Item newItem;
 
     // Start is called before the first frame update
     
@@ -58,7 +59,8 @@ public class ShopManager : MonoBehaviour
         {
             coins = coins - itemObjectSO[buttonNum].baseCost;
             coinInventory.Container.Items[0].amount = coins;
-            inventory.AddItem(itemObjectSO[buttonNum].data, 1);
+            newItem = itemObjectSO[buttonNum].CreateItem();
+            inventory.AddItem(newItem, 1);
             CheckPurchaseable();
         }
     }
