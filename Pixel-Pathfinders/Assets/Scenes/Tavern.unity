@@ -1561,6 +1561,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 48987012}
     m_Modifications:
+    - target: {fileID: 2831163110386069497, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 214838d01e52ed74cbf37e2778c5f0c9, type: 3}
     - target: {fileID: 4212692328072014037, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1710,6 +1714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 48987012}
     m_Modifications:
+    - target: {fileID: 2831163110386069497, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d11aa6d817de89744be8cc1607b15408, type: 3}
     - target: {fileID: 4212692328072014037, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2184,7 +2192,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4973899715530770354, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7664872773838760529, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_Pivot.x
@@ -2381,7 +2389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15041,7 +15049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 412, y: 173.16776}
+  m_AnchoredPosition: {x: 412, y: 256.88}
   m_SizeDelta: {x: 824, y: 346.3355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1612485220
@@ -15057,7 +15065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15797,7 +15805,7 @@ RectTransform:
   - {fileID: 1612485219}
   - {fileID: 1902173372}
   m_Father: {fileID: 954445205}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15817,7 +15825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15854,7 +15862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ebb04d3c646924392da3d95756bb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
   itemObjectSO:
   - {fileID: 11400000, guid: d4d66f1d5e0abe640ae4cdd484ada665, type: 2}
   - {fileID: 11400000, guid: 74c43c9d57a726144874e950aef169cd, type: 2}
@@ -15894,6 +15901,7 @@ MonoBehaviour:
   - {fileID: 399949595}
   - {fileID: 215484925}
   coinInventory: {fileID: 11400000, guid: e507c942418804b4dac884234ae8f7e6, type: 2}
+  inventory: {fileID: 11400000, guid: 59dc2fe0355438f45954d5eabd7bc8ca, type: 2}
 --- !u!1 &1686208578
 GameObject:
   m_ObjectHideFlags: 0
@@ -27357,6 +27365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 48987012}
     m_Modifications:
+    - target: {fileID: 2831163110386069497, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2197efb4c66544649aba4551f1e20af6, type: 3}
     - target: {fileID: 4212692328072014037, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -27646,6 +27658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 48987012}
     m_Modifications:
+    - target: {fileID: 2831163110386069497, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe2a4c4e4163ea7459a3f3018990abec, type: 3}
     - target: {fileID: 4212692328072014037, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
