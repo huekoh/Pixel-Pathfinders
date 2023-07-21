@@ -15,6 +15,8 @@ public class ItemObject : ScriptableObject
     public Sprite uiDisplay;
     public bool stackable;
     public ItemType type;
+    public string title;
+    public int baseCost;
     [TextArea(15,20)]
     public string description;
     public Item data = new Item();

@@ -15,7 +15,9 @@ MonoBehaviour:
   uiDisplay: {fileID: 21300000, guid: 214838d01e52ed74cbf37e2778c5f0c9, type: 3}
   stackable: 1
   type: 0
-  description: 
+  title: Health Potion
+  baseCost: 15
+  description: doesn't taste good
   data:
     Name: 
     Id: 0

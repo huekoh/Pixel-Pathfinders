@@ -15,8 +15,10 @@ MonoBehaviour:
   uiDisplay: {fileID: 21300000, guid: fe2a4c4e4163ea7459a3f3018990abec, type: 3}
   stackable: 1
   type: 3
-  description: 
+  title: Wooden Arrow
+  baseCost: 2
+  description: made out of twigs & flint
   data:
     Name: 
     Id: 1
-    buffs: []
+    itemValue: 0
