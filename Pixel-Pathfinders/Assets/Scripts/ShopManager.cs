@@ -7,11 +7,11 @@ using TMPro;
 public class ShopManager : MonoBehaviour
 {   
     public int coins;
-    public TMP_Text coinUI;
     public ItemObject[] itemObjectSO;
     public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
     public Button[] purchaseButtons;
+    public InventoryObject coinInventory;
 
     // Start is called before the first frame update
     
@@ -21,7 +21,8 @@ public class ShopManager : MonoBehaviour
         {
             shopPanelsGO[i].SetActive(true);
         }
-        coinUI.text = "Coins: " + coins.ToString();
+        //coinUI.text = "Coins: " + coins.ToString();
+        coins = coinInventory.Container.Items[0].amount;
         LoadPanels();
         CheckPurchaseable();
     }
@@ -34,7 +35,7 @@ public class ShopManager : MonoBehaviour
     public void AddCoins()
     {
         coins++;
-        coinUI.text = "Coins: " + coins.ToString();
+        coinInventory.Container.Items[0].amount = coins;
         CheckPurchaseable();
     }
 
@@ -54,7 +55,8 @@ public class ShopManager : MonoBehaviour
     public void PurchaseItem(int buttonNum)
     {
         coins = coins - itemObjectSO[buttonNum].baseCost;
-        coinUI.text = "Coins" + coins.ToString();
+        coinInventory.Container.Items[0].amount = coins;
+        //coinUI.text = "Coins" + coins.ToString();
         CheckPurchaseable();
     }
 
