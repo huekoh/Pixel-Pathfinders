@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Boss Level.unity
     guid: a2eebc2bbf477e34daa2281b1a07d4dc
+  - enabled: 1
+    path: Assets/Scenes/Tavern.unity
+    guid: e1eaf6bd88c78354286a5de51a4c7aad
   m_configObjects: {}
