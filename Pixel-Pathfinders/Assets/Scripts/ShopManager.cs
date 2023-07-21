@@ -6,7 +6,7 @@ using TMPro;
 
 public class ShopManager : MonoBehaviour
 {   
-    public int coins;
+    private int coins;
     public ItemObject[] itemObjectSO;
     public GameObject[] shopPanelsGO;
     public ShopTemplate[] shopPanels;
@@ -21,7 +21,6 @@ public class ShopManager : MonoBehaviour
         {
             shopPanelsGO[i].SetActive(true);
         }
-        //coinUI.text = "Coins: " + coins.ToString();
         coins = coinInventory.Container.Items[0].amount;
         LoadPanels();
         CheckPurchaseable();
@@ -56,7 +55,6 @@ public class ShopManager : MonoBehaviour
     {
         coins = coins - itemObjectSO[buttonNum].baseCost;
         coinInventory.Container.Items[0].amount = coins;
-        //coinUI.text = "Coins" + coins.ToString();
         CheckPurchaseable();
     }
 
