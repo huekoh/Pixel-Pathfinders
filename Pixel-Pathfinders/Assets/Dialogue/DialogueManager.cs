@@ -21,12 +21,14 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager instance;
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
+    private ShopUIManager shopUIManager;
 
     private void Awake() {
         if (instance != null) {
             Debug.LogError("Found more than one Dialogue manager in the scene");
         }
         instance = this;
+        shopUIManager = FindObjectOfType<ShopUIManager>();
     }
 
     public static DialogueManager GetInstance() {
@@ -59,6 +61,10 @@ public class DialogueManager : MonoBehaviour
         equipmentScreen.SetActive(false);
         dialoguePanel.SetActive(true);
         ContinueStory();
+        if (shopUIManager != null)
+        {
+            shopUIManager.dialogueStarted = true;
+        }
     }
 
     private void ExitDialogueMode() {
