@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public InventoryObject inventory;
-    public InventoryObject equipment;
+    public InventoryObject coinInventory;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,9 +13,16 @@ public class PlayerInventory : MonoBehaviour
         if (groundItem)
         {
             Item _item = new Item(groundItem.item);
-            if (inventory.AddItem(_item, 1)) 
+
+            if (_item.Name == "Coin")
             {
+                coinInventory.Container.Items[0].AddAmount(1);
                 Destroy(other.gameObject);
+            } else {
+                if (inventory.AddItem(_item, 1)) 
+                    {
+                        Destroy(other.gameObject);
+                    }
             }
         }
     }

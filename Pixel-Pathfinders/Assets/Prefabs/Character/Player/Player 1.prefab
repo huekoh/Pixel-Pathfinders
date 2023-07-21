@@ -302,4 +302,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 59dc2fe0355438f45954d5eabd7bc8ca, type: 2}
-  equipment: {fileID: 11400000, guid: efe037f8f4b15f846aac717d7db766f9, type: 2}
+  coinInventory: {fileID: 11400000, guid: e507c942418804b4dac884234ae8f7e6, type: 2}

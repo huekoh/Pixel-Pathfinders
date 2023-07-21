@@ -4694,7 +4694,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 214838d01e52ed74cbf37e2778c5f0c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac751a2452e250245b4bf0282212fc81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5111,7 +5111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1195baf253d3700458ad200bd12d5358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 74c43c9d57a726144874e950aef169cd, type: 2}
+  item: {fileID: 11400000, guid: 1025e884b19c756448e5f96705816f68, type: 2}
 --- !u!58 &549471101
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10764,7 +10764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1195baf253d3700458ad200bd12d5358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 74c43c9d57a726144874e950aef169cd, type: 2}
+  item: {fileID: 11400000, guid: 1025e884b19c756448e5f96705816f68, type: 2}
 --- !u!58 &1335865924
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15303,7 +15303,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 214838d01e52ed74cbf37e2778c5f0c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac751a2452e250245b4bf0282212fc81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15387,7 +15387,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 214838d01e52ed74cbf37e2778c5f0c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac751a2452e250245b4bf0282212fc81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20582,7 +20582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1195baf253d3700458ad200bd12d5358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 74c43c9d57a726144874e950aef169cd, type: 2}
+  item: {fileID: 11400000, guid: 1025e884b19c756448e5f96705816f68, type: 2}
 --- !u!58 &2063023280
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21916,6 +21916,14 @@ PrefabInstance:
     - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973899715530770354, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 293.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973899715530770354, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 187.4
       objectReference: {fileID: 0}
     - target: {fileID: 5913891988633558879, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_RootOrder
