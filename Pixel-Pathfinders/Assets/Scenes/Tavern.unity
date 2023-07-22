@@ -15859,7 +15859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemObjectSO:
-  - {fileID: 11400000, guid: d4d66f1d5e0abe640ae4cdd484ada665, type: 2}
+  - {fileID: 11400000, guid: 587e138bf14e0134f8718a6474fdba53, type: 2}
   - {fileID: 11400000, guid: 74c43c9d57a726144874e950aef169cd, type: 2}
   - {fileID: 11400000, guid: a6ffd1c0096ad1c428457ea80a24a1db, type: 2}
   - {fileID: 11400000, guid: a82c3e3ed51ab664bb4ecf7e8937722d, type: 2}
@@ -27657,7 +27657,7 @@ PrefabInstance:
     - target: {fileID: 2831163110386069497, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fe2a4c4e4163ea7459a3f3018990abec, type: 3}
+      objectReference: {fileID: 21300000, guid: 15642b9cc3274374da64900ab196b8d1, type: 3}
     - target: {fileID: 4212692328072014037, guid: 0ee9a7736f1a516499eb3fc079b67993, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

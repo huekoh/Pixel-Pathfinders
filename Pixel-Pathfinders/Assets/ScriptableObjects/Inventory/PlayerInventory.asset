@@ -18,61 +18,61 @@ MonoBehaviour:
     Items:
     - AllowedItems: 
       item:
-        Name: Arrow
-        Id: 1
-        buffs: []
-      amount: 1
-    - AllowedItems: 
-      item:
-        Name: Shield
-        Id: 3
-        buffs: []
+        Name: Sword
+        Id: 2
+        itemValue: 1
       amount: 1
     - AllowedItems: 
       item:
         Name: Health Potion
         Id: 0
-        buffs: []
-      amount: 8
+        itemValue: 1
+      amount: 5
     - AllowedItems: 
       item:
         Name: Shield
         Id: 3
-        buffs: []
+        itemValue: 1
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: Shield
+        Id: 3
+        itemValue: 1
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: Sword
+        Id: 2
+        itemValue: 1
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: Sword
+        Id: 2
+        itemValue: 1
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: Sword
+        Id: 2
+        itemValue: 1
       amount: 1
     - AllowedItems: 
       item:
         Name: 
         Id: -1
-        buffs: []
+        itemValue: 0
       amount: 0
+    - AllowedItems: 
+      item:
+        Name: Arrow
+        Id: 1
+        itemValue: 0
+      amount: 13
     - AllowedItems: 
       item:
         Name: 
         Id: -1
-        buffs: []
-      amount: 0
-    - AllowedItems: 
-      item:
-        Name: 
-        Id: -1
-        buffs: []
-      amount: 0
-    - AllowedItems: 
-      item:
-        Name: 
-        Id: -1
-        buffs: []
-      amount: 0
-    - AllowedItems: 
-      item:
-        Name: 
-        Id: -1
-        buffs: []
-      amount: 0
-    - AllowedItems: 
-      item:
-        Name: 
-        Id: -1
-        buffs: []
+        itemValue: 0
       amount: 0

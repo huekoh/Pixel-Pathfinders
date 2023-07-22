@@ -177,6 +177,10 @@ public class InventorySlot
     {
         amount += value;
     }
+    public void ReduceAmount(int value)
+    {
+        amount -= value;
+    }
     public bool CanPlaceInSlot(ItemObject _itemObject) 
     {
         if (AllowedItems.Length <= 0 || _itemObject == null || _itemObject.data.Id < 0) 

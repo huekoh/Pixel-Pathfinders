@@ -16,8 +16,8 @@ public class ItemObject : ScriptableObject
     public bool stackable;
     public ItemType type;
     public string title;
-    [TextArea(15,20)]
     public int baseCost;
+    [TextArea(15,20)]
     public string description;
     public Item data = new Item();
 

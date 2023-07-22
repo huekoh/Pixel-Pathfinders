@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 5752984474795011636}
   - component: {fileID: 2726569618168833409}
   - component: {fileID: 1222652759315131794}
+  - component: {fileID: 6275799588008403928}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -457,6 +458,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 59dc2fe0355438f45954d5eabd7bc8ca, type: 2}
   coinInventory: {fileID: 11400000, guid: e507c942418804b4dac884234ae8f7e6, type: 2}
+--- !u!114 &6275799588008403928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3313623902381307017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b1aa60ccf331145b3af3d3dbb358f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthData: {fileID: 11400000, guid: 55a134f3156e6dd4e8f333188200e184, type: 2}
+  healthTextPrefab: {fileID: 1431593783794525319, guid: 1f25767df12f85341bfa8986872fe383, type: 3}
 --- !u!1 &3353548746887137580
 GameObject:
   m_ObjectHideFlags: 0
