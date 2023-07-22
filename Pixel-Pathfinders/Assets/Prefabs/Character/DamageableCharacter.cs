@@ -15,11 +15,14 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     public float health;
     public float maxHealth;
     private EnemyHealthBar healthBar;
+    private PlayerHealthBarScript playerHealthBar;
+    public PlayerHealthData playerHealthData;
 
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         healthBar = GetComponentInChildren<EnemyHealthBar>();
+        playerHealthBar = GetComponentInChildren<PlayerHealthBarScript>();
     }
 
     public void Start()
@@ -27,7 +30,13 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
-        if (!isPlayer())
+        if (isPlayer())
+        {
+            health = playerHealthData.health;
+            maxHealth = playerHealthData.maxHealth;
+            playerHealthBar.SetHealth(health);
+        }
+        else
         {
             healthBar.UpdateHealthBar(health, maxHealth);
         }
@@ -36,13 +45,19 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     public void OnHit(float damage, Vector2 knockback)
     {
         if (!isInvulnerable) {
-            health -= damage;
-            rb.AddForce(knockback);
-
-            if (!isPlayer())
+            if (isPlayer())
             {
+                playerHealthData.health -= damage;
+                health = playerHealthData.health;
+                playerHealthBar.SetHealth(health);
+            }
+            else
+            {
+                health -= damage;
                 healthBar.UpdateHealthBar(health, maxHealth);
             }
+
+            rb.AddForce(knockback);
 
             // Change color of character to red everytime it's hit
             spriteRenderer.color = Color.red;
