@@ -18,14 +18,13 @@ MonoBehaviour:
     Items:
     - AllowedItems: 01000000
       item:
-        Name: Sword
-        Id: 2
-        buffs:
-        - value: 2
-      amount: 1
+        Name: 
+        Id: -1
+        itemValue: 0
+      amount: 0
     - AllowedItems: 02000000
       item:
         Name: 
         Id: -1
-        buffs: []
+        itemValue: 0
       amount: 0

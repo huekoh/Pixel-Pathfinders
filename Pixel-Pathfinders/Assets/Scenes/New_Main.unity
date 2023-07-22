@@ -21878,11 +21878,11 @@ PrefabInstance:
     - target: {fileID: 5617785986792663465, guid: 7900c80af6c950d4f9442f476a438933, type: 3}
       propertyPath: equipmentScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7664872773691575622}
     - target: {fileID: 5617785986792663465, guid: 7900c80af6c950d4f9442f476a438933, type: 3}
       propertyPath: inventoryScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7664872773691575621}
     - target: {fileID: 5617785986792663465, guid: 7900c80af6c950d4f9442f476a438933, type: 3}
       propertyPath: playerInventory
       value: 
@@ -22099,6 +22099,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+--- !u!1 &7664872773691575621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4361697271545199800, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+  m_PrefabInstance: {fileID: 7664872773691575620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7664872773691575622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2320022207587294583, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+  m_PrefabInstance: {fileID: 7664872773691575620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7993243334486973015
 PrefabInstance:
   m_ObjectHideFlags: 0
