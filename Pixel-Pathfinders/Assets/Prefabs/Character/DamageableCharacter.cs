@@ -15,14 +15,14 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     public float health;
     public float maxHealth;
     private EnemyHealthBar healthBar;
-    private PlayerHealthBarScript playerHealthBar;
+    private PlayerHealthBarUI playerHealthBar;
     public PlayerHealthData playerHealthData;
 
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         healthBar = GetComponentInChildren<EnemyHealthBar>();
-        playerHealthBar = GetComponentInChildren<PlayerHealthBarScript>();
+        playerHealthBar = GetComponentInChildren<PlayerHealthBarUI>();
     }
 
     public void Start()
