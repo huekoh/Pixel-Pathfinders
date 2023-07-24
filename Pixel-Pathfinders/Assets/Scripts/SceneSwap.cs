@@ -33,6 +33,12 @@ public class SceneSwap : MonoBehaviour {
         }
     }
 
+    public void RespawnFromDeath()
+    {
+        playerStorage.initialValue = playerPosition;
+        StartCoroutine(FadeCo());
+    }
+
     public IEnumerator FadeCo()
     {
         if(fadeOutPanel != null)

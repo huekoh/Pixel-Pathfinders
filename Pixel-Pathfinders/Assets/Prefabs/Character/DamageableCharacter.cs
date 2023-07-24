@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DamageableCharacter : MonoBehaviour, IDamageable
@@ -17,6 +18,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
     private EnemyHealthBar healthBar;
     private PlayerHealthBarUI playerHealthBar;
     public PlayerHealthData playerHealthData;
+    public SceneSwap respawn;
 
     public void Awake()
     {
@@ -65,7 +67,16 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
 
             // If health <= 0, destroy character after 0.3 seconds
             if (health <= 0) {
-                Invoke("DestroySelf", 0.3f);
+                if (isPlayer())
+                {
+                    playerHealthData.health = 1;
+                    health = playerHealthData.health;
+                    playerHealthBar.SetHealth(health);
+                    respawn.RespawnFromDeath();
+                } else
+                {
+                    Invoke("DestroySelf", 0.3f);
+                }
             }
 
             // Show floating text
@@ -109,4 +120,5 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
         // Reset the invulnerability flag
         isInvulnerable = false;
     }
+
 }
