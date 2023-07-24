@@ -6,17 +6,18 @@ using UnityEngine.EventSystems;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float moveSpeed;
     public GameObject swordHitbox;
-    Collider2D swordCollider;
-    Rigidbody2D rb;
-    Animator animator;
-    SpriteRenderer spriteRenderer;
+    private Collider2D swordCollider;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private Vector2 movement;
-    private bool canMove = true;
-    public VectorValue startingPosition;
     private static bool playerExists;
+    private bool canMove = true;
+    public bool isAttacking = false;
+    public VectorValue startingPosition;
     public InventoryObject playerEquipment;
+    public float moveSpeed;
 
     void Start()
     {
@@ -82,13 +83,23 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void LockMovement()
+    public void LockMovement()
     {
         canMove = false;
     }
 
-    void UnlockMovement()
+    public void UnlockMovement()
     {
         canMove = true;
+    }
+
+    public void IsAttacking()
+    {
+        isAttacking = true;
+    }
+
+    public void IsNotAttacking()
+    {
+        isAttacking = false;
     }
 }

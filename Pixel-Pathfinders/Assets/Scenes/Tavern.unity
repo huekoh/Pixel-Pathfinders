@@ -360,6 +360,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &73635230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3353548746887137580, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+  m_PrefabInstance: {fileID: 1887109006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100958262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,6 +2918,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 1676632490}
+  player: {fileID: 2131608906}
+  playerHealthBar: {fileID: 73635230}
   dialogueStarted: 0
 --- !u!4 &1142602353
 Transform:
@@ -26822,6 +26829,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1171002974934423184, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171002974934423184, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3313623902381307017, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -27647,6 +27662,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3313623902381307017, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
   m_PrefabInstance: {fileID: 1887109006}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2131608906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3264772355960583350, guid: c315b8cb53ecba642a42829c518536e5, type: 3}
+  m_PrefabInstance: {fileID: 1887109006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131608898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9578a1d7aaa92224d8f11ad9202c9d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1542050040706649733
 PrefabInstance:
   m_ObjectHideFlags: 0

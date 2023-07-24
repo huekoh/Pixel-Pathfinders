@@ -7,6 +7,8 @@ public class ShopUIManager : MonoBehaviour
     [Header("Shop UI")]
 
     [SerializeField] private GameObject shop;
+    [SerializeField] private PlayerControl player;
+    [SerializeField] private GameObject playerHealthBar;
     public bool dialogueStarted;
 
     // Start is called before the first frame update
@@ -28,6 +30,17 @@ public class ShopUIManager : MonoBehaviour
         {
             shop.SetActive(false);
             dialogueStarted = false;
+        }
+
+        if (shop.activeInHierarchy)
+        {
+            player.LockMovement();
+            playerHealthBar.SetActive(false);
+        }
+        else if (!shop.activeInHierarchy && !player.isAttacking)
+        {
+            player.UnlockMovement();
+            playerHealthBar.SetActive(true);
         }
     }
 }

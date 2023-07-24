@@ -55,11 +55,24 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(int buttonNum)
     {
-        if (itemObjectSO[buttonNum].stackable || inventory.EmptySlotCount > 0)
+        ItemObject itemToPurchase = itemObjectSO[buttonNum];
+
+        //if item is stackable and we have it in inventory
+        if (itemObjectSO[buttonNum].stackable && inventory.FindItemOnInventory(itemToPurchase.data) != null)
         {
-            coins = coins - itemObjectSO[buttonNum].baseCost;
+            coins = coins - itemToPurchase.baseCost;
             coinInventory.Container.Items[0].amount = coins;
-            newItem = itemObjectSO[buttonNum].CreateItem();
+            newItem = itemToPurchase.CreateItem();
+            inventory.AddItem(newItem, 1);
+            CheckPurchaseable();
+        }
+
+        //if we have any empty slots, just allow purchase
+        else if (inventory.EmptySlotCount > 0)
+        {
+            coins = coins - itemToPurchase.baseCost;
+            coinInventory.Container.Items[0].amount = coins;
+            newItem = itemToPurchase.CreateItem();
             inventory.AddItem(newItem, 1);
             CheckPurchaseable();
         }

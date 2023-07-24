@@ -27,16 +27,24 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void ConsumeFoodItem(InventorySlot foodItem)
     {
+        float healthDifference = maxHealth - health;
         int healthRestoration = foodItem.itemObject.data.itemValue;
         if (health < maxHealth)
         {
-            foodItem.ReduceAmount(1);
-            health += healthRestoration;
-            playerHealthData.health = health;
-            if (healthTextPrefab)
+            if (healthDifference >= healthRestoration)
             {
-            ShowHealthText(healthRestoration);
+                health += healthRestoration;
+                playerHealthData.health = health;
+                ShowHealthText(healthRestoration);
             }
+            else
+            {
+                health += healthDifference;
+                playerHealthData.health = health;
+                ShowHealthText(healthDifference);
+            }
+
+            foodItem.ReduceAmount(1);
         }
         
     }
