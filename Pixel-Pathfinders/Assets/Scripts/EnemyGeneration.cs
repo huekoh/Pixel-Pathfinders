@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class EnemyGeneration : MonoBehaviour
 {
-
-    public GameObject theEnemy;
+    [SerializeField]
+    private GameObject theEnemy;
     public int xPos;
     public int yPos;
+    public int xPosMin;
+    public int xPosMax;
+    public int yPosMin;
+    public int yPosMax;
     public int counter = 0;
     public int enemyCount;
     public float buffer;
@@ -22,12 +26,11 @@ public class EnemyGeneration : MonoBehaviour
     {
         while (counter < enemyCount)
         {
-            xPos = Random.Range(-6,3);
-            yPos = Random.Range(-2,4);
+            xPos = Random.Range(xPosMin, xPosMax);
+            yPos = Random.Range(yPosMin, yPosMax);
             Instantiate(theEnemy, new Vector3(xPos, yPos, 0), Quaternion.identity);
             yield return new WaitForSeconds(buffer);
-            counter += 2;
-            counter -= 1;
+            counter += 1;
         }
     }
 }
