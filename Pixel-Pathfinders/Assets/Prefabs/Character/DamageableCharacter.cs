@@ -73,8 +73,10 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
                     health = playerHealthData.health;
                     playerHealthBar.SetHealth(health);
                     respawn.RespawnFromDeath();
-                } else
+                }
+                else
                 {
+                    GetComponent<LootBag>().InstantiateLoot(transform.position);
                     Invoke("DestroySelf", 0.3f);
                 }
             }

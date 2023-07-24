@@ -17,6 +17,7 @@ public class ItemObject : ScriptableObject
     public ItemType type;
     public string title;
     public int baseCost;
+    public int dropChance;
     [TextArea(15,20)]
     public string description;
     public Item data = new Item();

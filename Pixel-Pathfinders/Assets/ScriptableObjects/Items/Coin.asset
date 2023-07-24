@@ -17,6 +17,7 @@ MonoBehaviour:
   type: 3
   title: 
   baseCost: 0
+  dropChance: 50
   description: 
   data:
     Name: 

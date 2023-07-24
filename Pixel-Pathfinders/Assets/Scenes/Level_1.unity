@@ -123,37 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &190193586
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 190193587}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &190193587
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190193586}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.81, y: 18.3, z: 0.47931722}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &235022683
 GameObject:
   m_ObjectHideFlags: 0
@@ -6363,6 +6332,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1208649602401191681, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208649602401191681, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208649602401191681, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208649602401191681, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208649602401191681, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208649602401191681, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2320022207587294580, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6506,6 +6499,30 @@ PrefabInstance:
     - target: {fileID: 7664872773838760533, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504460992426750072, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504460992426750072, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504460992426750072, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504460992426750072, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504460992426750072, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8504460992426750072, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8573964871401849161, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6807,7 +6824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 571112527994322101, guid: 017de76e46b2e794398be05c283815d3, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 571112527994322101, guid: 017de76e46b2e794398be05c283815d3, type: 3}
       propertyPath: m_LocalPosition.x
