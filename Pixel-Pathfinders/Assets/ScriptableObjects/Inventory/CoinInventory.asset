@@ -15,7 +15,7 @@ MonoBehaviour:
   savePath: 
   database: {fileID: 0}
   Container:
-    Items:
+    Slots:
     - AllowedItems: 
       item:
         Name: 
