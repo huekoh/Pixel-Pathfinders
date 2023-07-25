@@ -18,13 +18,13 @@ MonoBehaviour:
     Slots:
     - AllowedItems: 01000000
       item:
-        Name: Sword
-        Id: 3
-        itemValue: 10
-      amount: 1
+        Name: 
+        Id: -1
+        itemValue: 0
+      amount: 0
     - AllowedItems: 02000000
       item:
-        Name: Shield
-        Id: 2
-        itemValue: 1
-      amount: 1
+        Name: 
+        Id: -1
+        itemValue: 0
+      amount: 0

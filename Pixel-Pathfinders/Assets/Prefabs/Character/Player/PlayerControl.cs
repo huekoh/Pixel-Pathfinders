@@ -13,10 +13,12 @@ public class PlayerControl : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Vector2 movement;
     private GameObject shop;
-    private bool canMove = true;
+    [System.NonSerialized]
+    public bool canMove = true;
     public VectorValue startingPosition;
     public InventoryObject playerEquipment;
     private float moveSpeed = 5f;
+    [System.NonSerialized]
     public bool isAttacking = false;
 
     void Start()
