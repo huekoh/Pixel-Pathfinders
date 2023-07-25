@@ -23,7 +23,7 @@ public class SwordHitbox : MonoBehaviour
 
     void Update()
     {
-        swordDamage = playerEquipment.Container.Items[0].item.itemValue;
+        swordDamage = playerEquipment.Container.Slots[0].item.itemValue;
     }
 
     void setDirection(Vector2 direction) {

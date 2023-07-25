@@ -27,7 +27,7 @@ public class Slime : MonoBehaviour
 
     void Update()
     {
-        shieldProtectionValue = playerEquipment.Container.Items[1].item.itemValue;
+        shieldProtectionValue = playerEquipment.Container.Slots[1].item.itemValue;
     }
 
     void FixedUpdate()

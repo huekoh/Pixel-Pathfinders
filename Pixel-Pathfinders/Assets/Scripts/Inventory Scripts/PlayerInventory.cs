@@ -16,7 +16,7 @@ public class PlayerInventory : MonoBehaviour
 
             if (_item.Name == "Coin")
             {
-                coinInventory.Container.Items[0].AddAmount(1);
+                coinInventory.Container.Slots[0].AddAmount(1);
                 Destroy(other.gameObject);
             } else {
                 if (inventory.AddItem(_item, 1)) 

@@ -31,7 +31,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerEquipment.Container.Items[1].item.Id >= 0)
+        if (playerEquipment.Container.Slots[1].item.Id >= 0)
         {
             animator.SetBool("isHoldingShield", true);
         } else {
@@ -74,7 +74,7 @@ public class PlayerControl : MonoBehaviour
 
     void OnFire()
     {
-        if (playerEquipment.Container.Items[0].item.Id == -1)
+        if (playerEquipment.Container.Slots[0].item.Id == -1)
         {
             Debug.Log("No Sword is equipped!");
             return;

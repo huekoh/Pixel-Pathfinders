@@ -21,6 +21,6 @@ public class CoinScript : MonoBehaviour
 
     private void UpdateCoinText()
     {
-        coinAmount.text = coinInventory.Container.Items[0].amount.ToString();
+        coinAmount.text = coinInventory.Container.Slots[0].amount.ToString();
     }
 }

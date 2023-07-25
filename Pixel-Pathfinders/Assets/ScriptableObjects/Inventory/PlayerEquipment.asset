@@ -15,7 +15,7 @@ MonoBehaviour:
   savePath: 
   database: {fileID: 11400000, guid: 45d2546d9d58b24448bd21b40f676b2e, type: 2}
   Container:
-    Items:
+    Slots:
     - AllowedItems: 01000000
       item:
         Name: Sword

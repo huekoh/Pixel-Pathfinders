@@ -23,7 +23,7 @@ public class ShopManager : MonoBehaviour
         {
             shopPanelsGO[i].SetActive(true);
         }
-        coins = coinInventory.Container.Items[0].amount;
+        coins = coinInventory.Container.Slots[0].amount;
         LoadPanels();
         CheckPurchaseable();
     }
@@ -36,7 +36,7 @@ public class ShopManager : MonoBehaviour
     public void AddCoins()
     {
         coins++;
-        coinInventory.Container.Items[0].amount = coins;
+        coinInventory.Container.Slots[0].amount = coins;
         CheckPurchaseable();
     }
 
@@ -61,7 +61,7 @@ public class ShopManager : MonoBehaviour
         if (itemObjectSO[buttonNum].stackable && inventory.FindItemOnInventory(itemToPurchase.data) != null)
         {
             coins = coins - itemToPurchase.baseCost;
-            coinInventory.Container.Items[0].amount = coins;
+            coinInventory.Container.Slots[0].amount = coins;
             newItem = itemToPurchase.CreateItem();
             inventory.AddItem(newItem, 1);
             CheckPurchaseable();
@@ -71,7 +71,7 @@ public class ShopManager : MonoBehaviour
         else if (inventory.EmptySlotCount > 0)
         {
             coins = coins - itemToPurchase.baseCost;
-            coinInventory.Container.Items[0].amount = coins;
+            coinInventory.Container.Slots[0].amount = coins;
             newItem = itemToPurchase.CreateItem();
             inventory.AddItem(newItem, 1);
             CheckPurchaseable();

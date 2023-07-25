@@ -15,19 +15,37 @@ MonoBehaviour:
   savePath: /inventory.Save
   database: {fileID: 11400000, guid: 45d2546d9d58b24448bd21b40f676b2e, type: 2}
   Container:
-    Items:
+    Slots:
     - AllowedItems: 
       item:
         Name: Health Potion
         Id: 1
         itemValue: 2
-      amount: 2
+      amount: 7
     - AllowedItems: 
       item:
         Name: Fish
         Id: 0
         itemValue: 1
-      amount: 4
+      amount: 3
+    - AllowedItems: 
+      item:
+        Name: Shield
+        Id: 2
+        itemValue: 1
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: Sword
+        Id: 3
+        itemValue: 10
+      amount: 1
+    - AllowedItems: 
+      item:
+        Name: 
+        Id: -1
+        itemValue: 0
+      amount: 0
     - AllowedItems: 
       item:
         Name: Sword
@@ -40,24 +58,6 @@ MonoBehaviour:
         Id: 2
         itemValue: 1
       amount: 1
-    - AllowedItems: 
-      item:
-        Name: 
-        Id: -1
-        itemValue: 0
-      amount: 0
-    - AllowedItems: 
-      item:
-        Name: 
-        Id: -1
-        itemValue: 0
-      amount: 0
-    - AllowedItems: 
-      item:
-        Name: 
-        Id: -1
-        itemValue: 0
-      amount: 0
     - AllowedItems: 
       item:
         Name: 
