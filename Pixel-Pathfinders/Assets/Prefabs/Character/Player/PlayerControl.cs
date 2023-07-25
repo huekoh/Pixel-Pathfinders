@@ -12,12 +12,12 @@ public class PlayerControl : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Vector2 movement;
-    private static bool playerExists;
+    private GameObject shop;
     private bool canMove = true;
-    public bool isAttacking = false;
     public VectorValue startingPosition;
     public InventoryObject playerEquipment;
-    public float moveSpeed;
+    private float moveSpeed = 5f;
+    public bool isAttacking = false;
 
     void Start()
     {
@@ -31,16 +31,21 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            animator.SetFloat("Speed", 0);
-        }
-
         if (playerEquipment.Container.Items[1].item.Id >= 0)
         {
             animator.SetBool("isHoldingShield", true);
         } else {
             animator.SetBool("isHoldingShield", false);
+        }
+
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            animator.SetFloat("Speed", 0);
+            moveSpeed = 0f;
+        }
+        else
+        {
+            moveSpeed = 5f;
         }
         
         if (canMove == true && !DialogueManager.GetInstance().dialogueIsPlaying)
@@ -62,7 +67,7 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (canMove == true && !DialogueManager.GetInstance().dialogueIsPlaying) {
+        if (canMove == true) {
             rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
         }
     }
