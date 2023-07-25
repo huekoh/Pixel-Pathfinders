@@ -17,8 +17,9 @@ MonoBehaviour:
   type: 1
   title: Sword
   baseCost: 3
+  dropChance: 0
   description: the handle is rusty
   data:
     Name: 
     Id: 2
-    itemValue: 1
+    itemValue: 10

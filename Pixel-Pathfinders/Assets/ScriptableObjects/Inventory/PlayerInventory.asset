@@ -18,10 +18,10 @@ MonoBehaviour:
     Items:
     - AllowedItems: 
       item:
-        Name: 
-        Id: -1
-        itemValue: 0
-      amount: 0
+        Name: Fish
+        Id: 0
+        itemValue: 1
+      amount: 4
     - AllowedItems: 
       item:
         Name: 

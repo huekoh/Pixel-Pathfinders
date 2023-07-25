@@ -5,10 +5,15 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-   [SerializeField] private Slider slider;
-   [SerializeField] private Camera camera;
-   [SerializeField] private Transform target;
-   [SerializeField] private Vector3 offset;
+    [SerializeField] private Slider slider;
+    [SerializeField] private Transform target;
+    [SerializeField] private Vector3 offset;
+    private Camera camera;
+
+    private void Start()
+    {
+        camera = Camera.main; // Find the main camera at runtime
+    }
 
     public void UpdateHealthBar(float currentValue, float maxValue)
     {
