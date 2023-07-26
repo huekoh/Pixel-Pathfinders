@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5401584577618433904}
   - component: {fileID: 5401584577618433905}
   - component: {fileID: 5401584577618433918}
-  - component: {fileID: 5401584577618433919}
   - component: {fileID: 5401584577618433916}
   - component: {fileID: 5401584577618433906}
+  - component: {fileID: 3069887049601797776}
   m_Layer: 0
   m_Name: Obelisk Enemy Spawner
   m_TagString: Untagged
@@ -137,23 +137,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5088401}
   m_EdgeRadius: 0
---- !u!114 &5401584577618433919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5401584577618433917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3b0ef37cdc013044b66319c70be9b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthTextPrefab: {fileID: 1431593783794525319, guid: 1f25767df12f85341bfa8986872fe383, type: 3}
-  health: 50
-  maxHealth: 50
-  playerHealthData: {fileID: 0}
-  respawn: {fileID: 0}
 --- !u!114 &5401584577618433916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +173,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppedItemPrefab: {fileID: 2812394113998576293, guid: ae3b107651e984c4f8808f8293d29f67, type: 3}
   itemDropList: []
+--- !u!114 &3069887049601797776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401584577618433917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c6e9f68e164ca43928c2bb4d5b1050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5401584576010002285
 PrefabInstance:
   m_ObjectHideFlags: 0
