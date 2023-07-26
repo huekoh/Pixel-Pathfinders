@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Ink.Runtime;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -11,8 +13,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
+    [Header("Choices UI")]
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
     [SerializeField] private Animator portraitAnimator;
-
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool isTyping;
@@ -26,6 +30,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("Found more than one Dialogue manager in the scene");
         }
         instance = this;
+
         shopUIManager = FindObjectOfType<ShopUIManager>();
     }
 
@@ -37,6 +42,19 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         isTyping = false;
         dialoguePanel.SetActive(false);
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices) 
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
+
+        for (int i = 0; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
     }
 
     private void Update() {
@@ -86,13 +104,64 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void ContinueStory() {
+        if (currentStory.currentChoices.Count > 0) {
+        // If choices are available, do not continue the story.
+            return;
+        }
+
         if (currentStory.canContinue) {
             dialogueText.text = currentStory.Continue();
             StartCoroutine(TypeText(dialogueText.text));
+            StartCoroutine(ShowChoicesAfterText());
             HandleTags(currentStory.currentTags);
         } else {
             StartCoroutine(ExitDialogueCoroutine());
         }
+    }
+
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+
+        // defensive check to make sure our UI can support the number of choices coming in
+        if (currentChoices.Count > choices.Length)
+        {
+            Debug.LogError("More choices were given than the UI can support. Number of choices given: " 
+                + currentChoices.Count);
+        }
+
+        int index = 0;
+        // enable and initialize the choices up to the amount of choices for this line of dialogue
+        foreach(Choice choice in currentChoices) 
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+
+            index++;
+        }
+        // go through the remaining choices the UI supports and make sure they're hidden
+        for (int i = index; i < choices.Length; i++) 
+        {
+            choices[i].gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator ShowChoicesAfterText()
+    {
+        // Wait until the text typing coroutine finishes before showing choices
+        while (isTyping)
+        {
+            yield return null;
+        }
+
+        DisplayChoices(); // Show the choices after text typing is complete
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        // After making the choice, continue the story
+        ContinueStory();
     }
 
     private void HandleTags(List<string> currentTags) {

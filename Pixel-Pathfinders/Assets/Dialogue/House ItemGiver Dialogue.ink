@@ -1,0 +1,1 @@
+An old sword, I should take it with me. #speaker: Player #portrait: Player_Neutral
