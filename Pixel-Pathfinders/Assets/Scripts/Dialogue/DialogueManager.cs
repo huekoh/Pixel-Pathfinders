@@ -20,6 +20,9 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool isTyping;
+    private bool choiceMade;
+    public delegate void ChoiceMadeHandler(int choiceIndex);
+    public static event ChoiceMadeHandler OnChoiceMade;
     private static DialogueManager instance;
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
@@ -41,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     private void Start() {
         dialogueIsPlaying = false;
         isTyping = false;
+        choiceMade = false;
         dialoguePanel.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -74,6 +78,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
         ContinueStory();
         if (shopUIManager != null)
         {
@@ -82,6 +87,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void ExitDialogueMode() {
+        choiceMade = false;
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -159,8 +165,25 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
+        if (choiceMade)
+        {
+            return;
+        }
+
         currentStory.ChooseChoiceIndex(choiceIndex);
-        // After making the choice, continue the story
+
+        for (int i = 0; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
+
+        if (OnChoiceMade != null)
+        {
+            OnChoiceMade(choiceIndex);
+        }
+
+        choiceMade = true;
+
         ContinueStory();
     }
 

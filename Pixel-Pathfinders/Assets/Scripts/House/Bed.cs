@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Bed : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Player Health")]
+    [SerializeField] private PlayerHealthData playerHealthData;
+
+    private void OnEnable()
     {
-        
+        DialogueManager.OnChoiceMade += HandleChoiceMade;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        DialogueManager.OnChoiceMade -= HandleChoiceMade;
+    }
+
+    private void HandleChoiceMade(int choiceIndex)
+    {
+        if (choiceIndex == 0)
+        {
+            playerHealthData.health = playerHealthData.maxHealth;
+        }
     }
 }
