@@ -13,16 +13,17 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ShopManager shopManager = FindObjectOfType<ShopManager>();
-        if (shopManager != null)
-        {
-            shop = shopManager.gameObject;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        ShopManager shopManager = FindObjectOfType<ShopManager>();
+        if (shopManager != null)
+        {
+            shop = shopManager.gameObject;
+        }
+
         if (dialoguePanel.activeInHierarchy)
         {
             inventoryScreen.SetActive(false);

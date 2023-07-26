@@ -21,5 +21,5 @@ MonoBehaviour:
   description: the handle is rusty
   data:
     Name: 
-    Id: 2
-    itemValue: 10
+    Id: 3
+    itemValue: 5

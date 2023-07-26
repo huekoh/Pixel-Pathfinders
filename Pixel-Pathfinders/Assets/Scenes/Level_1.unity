@@ -30101,17 +30101,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3069887049601797776, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069887049601797776, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433907, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433907, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.42
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433907, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.39
+      value: 7.76
       objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433907, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30148,6 +30156,14 @@ PrefabInstance:
     - target: {fileID: 5401584577618433917, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_Name
       value: Obelisk Enemy Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401584577618433918, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3806064
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401584577618433918, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.047575712
       objectReference: {fileID: 0}
     - target: {fileID: 7097851786124529760, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_AnchorMax.x

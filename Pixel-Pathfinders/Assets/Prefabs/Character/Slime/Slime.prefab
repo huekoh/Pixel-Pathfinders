@@ -182,8 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthTextPrefab: {fileID: 1431593783794525319, guid: 1f25767df12f85341bfa8986872fe383, type: 3}
-  health: 3
-  maxHealth: 3
+  health: 10
+  maxHealth: 10
   playerHealthData: {fileID: 0}
   respawn: {fileID: 0}
 --- !u!114 &5216563471393078550
