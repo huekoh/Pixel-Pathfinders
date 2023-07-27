@@ -6474,6 +6474,34 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 547.8375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 76.2578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000011444092
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361697271545199801, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38.128906
+      objectReference: {fileID: 0}
     - target: {fileID: 4973899715530770354, guid: ea3a556a7cbf2cb4a946edb69a6b9379, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -30165,6 +30193,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.047575712
       objectReference: {fileID: 0}
+    - target: {fileID: 7097851785884639443, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: offset.y
+      value: -0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 7097851786124529760, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -30237,6 +30269,18 @@ PrefabInstance:
     - target: {fileID: 3931301393480504328, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
       propertyPath: m_Name
       value: Obelisk Enemy Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931301393480504329, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
+      propertyPath: buffer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931301393480504329, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
+      propertyPath: xPosMax
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931301393480504329, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
+      propertyPath: yPosMin
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
