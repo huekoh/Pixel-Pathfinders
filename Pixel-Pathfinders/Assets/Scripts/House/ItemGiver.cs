@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemGiver : MonoBehaviour
+public class ItemGiver : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] private InventoryObject inventory;
@@ -10,23 +10,25 @@ public class ItemGiver : MonoBehaviour
     [SerializeField] private GameObject visualCue;
     [SerializeField] private GameObject visual;
     [SerializeField] private GameObject visual2;
-    public bool hasGivenItem { get; private set; }
+    public bool hasGivenItem;
     private bool playerInRange;
-    private const string hasGivenItemKey = "HasGivenItem";
+    
 
     private void Awake() {
         playerInRange = false;
-        hasGivenItem = false;
         visualCue.SetActive(false);
     }
-    void Start()
-    {
-        hasGivenItem = PlayerPrefs.GetInt(hasGivenItemKey, 0) == 1;
 
-        if (hasGivenItem)
-        {
-            Debug.Log("The item has already been given.");
-        }
+    private void Start() {}
+
+    public void LoadData(GameData data)
+    {
+        this.hasGivenItem = data.hasGivenItem;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.hasGivenItem = this.hasGivenItem;
     }
 
     private void Update() {
@@ -38,8 +40,6 @@ public class ItemGiver : MonoBehaviour
                 visualCue.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E)) {
                     hasGivenItem = true;
-                    PlayerPrefs.SetInt(hasGivenItemKey, 1);
-                    PlayerPrefs.Save();
                     inventory.AddItem(itemToGive.CreateItem(), 1);
                     visualCue.SetActive(false);
                     DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
@@ -70,8 +70,5 @@ public class ItemGiver : MonoBehaviour
     public void Reset()
     {
         hasGivenItem = false;
-
-        PlayerPrefs.SetInt(hasGivenItemKey, 0);
-        PlayerPrefs.Save();
     }
 }
