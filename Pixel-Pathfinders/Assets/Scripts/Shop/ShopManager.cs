@@ -24,7 +24,7 @@ public class ShopManager : MonoBehaviour
             shopPanelsGO[i].SetActive(true);
         }
         coins = coinInventory.Container.Slots[0].amount;
-        //LoadPanels();
+        LoadPanels();
         CheckPurchaseable();
     }
 

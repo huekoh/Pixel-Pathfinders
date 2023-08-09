@@ -7,11 +7,24 @@ using UnityEditor;
 using System.Runtime.Serialization;
 
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/Inventory")]
-public class InventoryObject : ScriptableObject
+public class InventoryObject : ScriptableObject //, IDataPersistence
 {
     public string savePath;
     public ItemDatabaseObject database;
     public Inventory Container;
+
+    // public void LoadData(GameData data)
+    // {
+    //     for (int i = 0; i < Container.Slots.Length; i++)
+    //     {
+    //         Container.Slots[i] = data.inventoryData.slots[i].TryGetValue("item", out value);
+    //     }
+    // }
+
+    // public void SaveData(ref GameData data)
+    // {
+
+    // }
 
     public bool AddItem(Item _item, int _amount) 
     {
