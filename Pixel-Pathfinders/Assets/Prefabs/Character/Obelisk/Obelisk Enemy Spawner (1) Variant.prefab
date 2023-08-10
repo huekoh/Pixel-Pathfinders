@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: yPosMin
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 5401584577618433916, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: theEnemy
+      value: 
+      objectReference: {fileID: 3605007385035545818, guid: d6291ab6260ba204a8accf6012816cd5, type: 3}
     - target: {fileID: 5401584577618433917, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_Name
       value: Obelisk Enemy Spawner (1) Variant

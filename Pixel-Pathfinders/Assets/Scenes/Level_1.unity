@@ -30342,5 +30342,9 @@ PrefabInstance:
       propertyPath: yPosMin
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 3931301393480504329, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
+      propertyPath: theEnemy
+      value: 
+      objectReference: {fileID: 3605007385035545818, guid: d6291ab6260ba204a8accf6012816cd5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
