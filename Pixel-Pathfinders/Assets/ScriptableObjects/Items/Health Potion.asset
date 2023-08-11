@@ -17,7 +17,7 @@ MonoBehaviour:
   type: 0
   title: Health Potion
   baseCost: 10
-  dropChance: 3
+  dropChance: 10
   description: doesn't taste good
   data:
     Name: 

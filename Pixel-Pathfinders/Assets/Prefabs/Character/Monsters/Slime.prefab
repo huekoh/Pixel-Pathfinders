@@ -182,8 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthTextPrefab: {fileID: 1431593783794525319, guid: 1f25767df12f85341bfa8986872fe383, type: 3}
-  health: 10
-  maxHealth: 10
+  health: 6
+  maxHealth: 6
   playerHealthData: {fileID: 0}
   respawn: {fileID: 0}
 --- !u!114 &5216563471393078550
@@ -200,7 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppedItemPrefab: {fileID: 2812394113998576293, guid: ae3b107651e984c4f8808f8293d29f67, type: 3}
   itemDropList:
-  - {fileID: 11400000, guid: 74c43c9d57a726144874e950aef169cd, type: 2}
   - {fileID: 11400000, guid: 587e138bf14e0134f8718a6474fdba53, type: 2}
   - {fileID: 11400000, guid: 1025e884b19c756448e5f96705816f68, type: 2}
 --- !u!1 &5635155532400228924

@@ -18,7 +18,7 @@ MonoBehaviour:
   title: Fish
   baseCost: 6
   dropChance: 8
-  description: raw fish yum
+  description: a raw fish
   data:
     Name: 
     Id: 0
