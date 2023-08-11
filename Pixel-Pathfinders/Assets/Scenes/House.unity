@@ -13176,7 +13176,7 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: f8cab215898fd8f4aa18c8c7b125adff, type: 3}
   itemGiver: {fileID: 1867077319}
   player: {fileID: 1734708597}
-  moveBackDistance: {x: 0, y: -0.1, z: 0}
+  moveBackDistance: {x: 0, y: -0.15, z: 0}
 --- !u!61 &1500966569
 BoxCollider2D:
   m_ObjectHideFlags: 0

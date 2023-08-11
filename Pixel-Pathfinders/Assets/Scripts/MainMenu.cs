@@ -12,16 +12,16 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        if (!DataPersistenceManager.instance.HasGameData())
+        /*if (!DataPersistenceManager.instance.HasGameData())
         {
             continueGameButton.interactable = false;
-        }
+        }*/
     }
 
     public void PlayGame()
     {
         DisableMenuButtons();
-        DataPersistenceManager.instance.NewGame();
+        //DataPersistenceManager.instance.NewGame();
         SceneManager.LoadSceneAsync("House");
     }
 
@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
     public void ContinueGame()
     {
         DisableMenuButtons();
-        DataPersistenceManager.instance.SaveGame();
+        //DataPersistenceManager.instance.SaveGame();
         SceneManager.LoadSceneAsync("House");
     }
 

@@ -30241,9 +30241,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5401584577618433916, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: counter
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433917, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_Name
       value: Obelisk Enemy Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401584577618433917, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433918, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: m_Size.x
@@ -30346,5 +30354,9 @@ PrefabInstance:
       propertyPath: theEnemy
       value: 
       objectReference: {fileID: 3605007385035545818, guid: d6291ab6260ba204a8accf6012816cd5, type: 3}
+    - target: {fileID: 3931301393480504329, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
+      propertyPath: enemyCount
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c7346375c6b5d43bfe4992da9e19f9, type: 3}
