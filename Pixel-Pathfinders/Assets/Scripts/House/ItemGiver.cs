@@ -10,7 +10,7 @@ public class ItemGiver : MonoBehaviour//, IDataPersistence
     [SerializeField] private GameObject visualCue;
     [SerializeField] private GameObject visual;
     [SerializeField] private GameObject visual2;
-    public bool hasGivenItem;
+    public bool hasGivenItem { get; private set; }
     private bool playerInRange;
     private const string hasGivenItemKey = "HasGivenItem";
     
@@ -21,8 +21,10 @@ public class ItemGiver : MonoBehaviour//, IDataPersistence
         visualCue.SetActive(false);
     }
 
-    private void Start() {
+    void Start()
+    {
         hasGivenItem = PlayerPrefs.GetInt(hasGivenItemKey, 0) == 1;
+
         if (hasGivenItem)
         {
             Debug.Log("The item has already been given.");

@@ -30243,6 +30243,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433916, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
       propertyPath: counter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401584577618433916, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
+      propertyPath: enemyCount
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5401584577618433917, guid: 1aa6e089422f8c54d878a3827c78c15a, type: 3}
